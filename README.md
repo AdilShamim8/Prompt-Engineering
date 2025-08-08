@@ -7,13 +7,13 @@
 
 A comprehensive repository dedicated to mastering prompt engineering with curated guides, examples, and best practices for optimizing AI interactions across different domains.
 
-## 🌟 Overview
+##  Overview
 
 Prompt engineering is the art and science of crafting precise inputs to get the best possible outputs from AI models like ChatGPT, Claude, Gemini, and others. This repository serves as a central hub for techniques, strategies, and ready-to-use prompts that help you harness the full potential of generative AI.
 
 Whether you're conducting research, studying, or teaching, effective prompt engineering can dramatically improve your AI interactions and outcomes.
 
-## 📚 Repository Structure
+##  Repository Structure
 
 This repository is organized into three main sections to serve different user needs:
 
@@ -38,7 +38,7 @@ This repository is organized into three main sections to serve different user ne
 - Differentiated instruction prompts
 - Student engagement and interactive learning activities
 
-## 🔍 Why Prompt Engineering Matters
+## Why Prompt Engineering Matters
 
 Effective prompt engineering is essential to:
 
@@ -48,7 +48,7 @@ Effective prompt engineering is essential to:
 - **Maintain Control**: Guide the AI toward your specific needs and objectives
 - **Reduce Hallucinations**: Minimize incorrect information through careful constraints
 
-## ⚡ Quick Start Guide
+## Quick Start Guide
 
 ### Basic Prompt Structure
 
@@ -74,7 +74,7 @@ FORMAT: Structure your response with distinct sections for research design, data
 CONSTRAINTS: Focus on practical implementations that could be completed within a 6-month timeframe with limited resources. Address ethical considerations for researching potentially sensitive topics.
 ```
 
-## 🛠️ Best Practices
+## Best Practices
 
 1. **Be Specific**: The more specific your prompt, the better the response
 2. **Provide Context**: Include relevant background information
@@ -85,7 +85,7 @@ CONSTRAINTS: Focus on practical implementations that could be completed within a
 7. **Chain Prompts**: Break complex tasks into sequential prompts
 8. **Test Variations**: Try different approaches for best results
 
-## 🤝 How to Contribute
+## How to Contribute
 
 Contributions are welcome and greatly appreciated! Here's how you can contribute:
 
@@ -103,7 +103,7 @@ Contributions are welcome and greatly appreciated! Here's how you can contribute
 - Test your prompts with at least one AI model before submitting
 - Document any limitations or special considerations
 
-## 📚 Additional Resources
+## Additional Resources
 
 - [OpenAI's Prompt Engineering Guide](https://platform.openai.com/docs/guides/prompt-engineering)
 - [Anthropic's Prompt Design Best Practices](https://docs.anthropic.com/claude/docs/prompt-engineering)
@@ -111,7 +111,7 @@ Contributions are welcome and greatly appreciated! Here's how you can contribute
 - [Gemini Prompt Design](https://ai.google.dev/docs/prompt_design)
 - [Awesome Prompt Engineering](https://github.com/promptslab/Awesome-Prompt-Engineering)
 
-## 📋 Getting Started
+## Getting Started
 
 ```bash
 # Clone the Repository
@@ -122,11 +122,11 @@ cd Prompt-Engineering
 # Navigate to the section that matches your needs
 ```
 
-## 📜 License
+## License
 
 This project is licensed under the [MIT License](LICENSE) - see the LICENSE file for details.
 
-## 📬 Contact
+## Contact
 
 For questions, suggestions, or feedback:
 - [Open an issue](https://github.com/AdilShamim8/Prompt-Engineering/issues)
@@ -135,7 +135,7 @@ For questions, suggestions, or feedback:
 ---
 
 <p align="center">
-  <sub>Last updated: August 8, 2025</sub>
+  <sub>Last updated: August, 2025</sub>
 </p>
 
 <p align="center">
