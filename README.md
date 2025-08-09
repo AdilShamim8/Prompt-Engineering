@@ -38,7 +38,7 @@ This repository is organized into four main sections to serve different user nee
 - Differentiated instruction prompts
 - Student engagement and interactive learning activities
 
-### [AI Prompts For Marketing & Communications](./AI%20Prompts%20For%20Marketing%20%26%20Communications)
+### [AI Prompts For Marketing & Communications](https://github.com/AdilShamim8/Prompt-Engineering/tree/main/AI%20Prompts%20for%20Marketing%20%26%20Communications)
 - Content creation and copywriting templates
 - Social media campaign development and optimization
 - Brand voice consistency guidelines
