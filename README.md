@@ -108,7 +108,7 @@ Contributions are welcome and greatly appreciated! Here's how you can contribute
 - [OpenAI's Prompt Engineering Guide](https://platform.openai.com/docs/guides/prompt-engineering)
 - [Anthropic's Prompt Design Best Practices](https://docs.anthropic.com/claude/docs/prompt-engineering)
 - [Prompt Engineering Patterns](https://www.promptingguide.ai/)
-- [Gemini Prompt Design](https://ai.google.dev/docs/prompt_design)
+- [Gemini Prompt Design](https://ai.google.dev/gemini-api/docs/prompting-strategies)
 - [Awesome Prompt Engineering](https://github.com/promptslab/Awesome-Prompt-Engineering)
 
 ## Getting Started
@@ -131,6 +131,7 @@ This project is licensed under the [MIT License](LICENSE) - see the LICENSE file
 For questions, suggestions, or feedback:
 - [Open an issue](https://github.com/AdilShamim8/Prompt-Engineering/issues)
 - Contact the repository owner: [AdilShamim8](https://github.com/AdilShamim8)
+- adilshamim696@gmail.com
 
 ---
 
