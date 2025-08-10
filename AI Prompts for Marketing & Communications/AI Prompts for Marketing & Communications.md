@@ -322,11 +322,6 @@ Create prompt variations for different customer segments:
 
 This comprehensive guide provides the foundation for implementing AI prompts effectively across marketing and communications. The key to success lies in consistent experimentation, measurement, and refinement to achieve optimal results that drive engagement, conversions, and business growth.
 
-I'm on here if you want to follow:
-GitHub -  https://github.com/AdilShamim8 <br>
-LinkedIn - https://www.linkedin.com/in/adilshamim8 <br>
-Twitter(x) - https://x.com/adil_shamim8  <br>
-
 
 [^1]: https://blog.hurree.co/measuring-the-roi-of-ai-in-marketing-key-metrics-and-strategies-for-marketers
 
@@ -501,4 +496,10 @@ Twitter(x) - https://x.com/adil_shamim8  <br>
 [^86]: https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/40a043c35a55955b71b9a72b95d79d8a/a5786493-3ab1-4683-a61f-f622290b99e0/43f0d21e.csv
 
 [^87]: https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/40a043c35a55955b71b9a72b95d79d8a/c5436c0a-4548-492c-b4e5-33e238691009/db5cb146.md
+
+-----------------------------------
+I'm on here if you want to follow:
+GitHub -  https://github.com/AdilShamim8 <br>
+LinkedIn - https://www.linkedin.com/in/adilshamim8 <br>
+Twitter(x) - https://x.com/adil_shamim8  <br>
 
