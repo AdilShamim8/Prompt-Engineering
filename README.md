@@ -7,13 +7,13 @@
 
 A comprehensive repository dedicated to mastering prompt engineering with curated guides, examples, and best practices for optimizing AI interactions across different domains.
 
-## 🌟 Overview
+## Overview
 
 Prompt engineering is the art and science of crafting precise inputs to get the best possible outputs from AI models like ChatGPT, Claude, Gemini, and others. This repository serves as a central hub for techniques, strategies, and ready-to-use prompts that help you harness the full potential of generative AI.
 
 Whether you're a beginner, researcher, student, teacher, business professional, data scientist, ML engineer, or work in marketing and communications, effective prompt engineering can dramatically improve your AI interactions and outcomes.
 
-## 📚 Repository Structure
+## Repository Structure
 
 This repository is organized into the following main sections to serve different user needs:
 
@@ -69,7 +69,7 @@ This repository is organized into the following main sections to serve different
 - Marketing analytics interpretation and strategic planning
 - PR crisis management and response frameworks
 
-## 🔍 Why Prompt Engineering Matters
+## Why Prompt Engineering Matters
 
 Effective prompt engineering is essential to:
 
