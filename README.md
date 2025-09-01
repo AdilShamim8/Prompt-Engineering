@@ -3,17 +3,17 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![GitHub stars](https://img.shields.io/github/stars/AdilShamim8/Prompt-Engineering?style=social)](https://github.com/AdilShamim8/Prompt-Engineering/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/AdilShamim8/Prompt-Engineering?style=social)](https://github.com/AdilShamim8/Prompt-Engineering/network/members)
-[![Last Updated](https://img.shields.io/badge/Last%20Updated-August%202025-brightgreen)](https://github.com/AdilShamim8/Prompt-Engineering/commits/main)
+[![Last Updated](https://img.shields.io/badge/Last%20Updated-September%202025-brightgreen)](https://github.com/AdilShamim8/Prompt-Engineering/commits/main)
 
 A comprehensive repository dedicated to mastering prompt engineering with curated guides, examples, and best practices for optimizing AI interactions across different domains.
 
-## Overview
+## 🌟 Overview
 
 Prompt engineering is the art and science of crafting precise inputs to get the best possible outputs from AI models like ChatGPT, Claude, Gemini, and others. This repository serves as a central hub for techniques, strategies, and ready-to-use prompts that help you harness the full potential of generative AI.
 
-Whether you're a beginner, researcher, student, teacher, data scientist, ML engineer, or work in marketing and communications, effective prompt engineering can dramatically improve your AI interactions and outcomes.
+Whether you're a beginner, researcher, student, teacher, business professional, data scientist, ML engineer, or work in marketing and communications, effective prompt engineering can dramatically improve your AI interactions and outcomes.
 
-##  Repository Structure
+## 📚 Repository Structure
 
 This repository is organized into the following main sections to serve different user needs:
 
@@ -23,6 +23,14 @@ This repository is organized into the following main sections to serve different
 - Simple and practical prompt examples
 - Common mistakes and how to avoid them
 - Exercises and templates for hands-on learning
+
+### [AI Prompt Engineering for Business](https://github.com/AdilShamim8/Prompt-Engineering/tree/main/AI%20Prompt%20Engineering%20for%20Business)
+- Strategic planning and decision-making prompts
+- Business analysis and competitive intelligence
+- Operational efficiency and process optimization
+- Customer insights and market research approaches
+- Financial forecasting and scenario planning
+- Leadership development and management coaching
 
 ### [AI Prompt Engineering for Data Scientists & ML Engineers](https://github.com/AdilShamim8/Prompt-Engineering/tree/main/AI%20Prompt%20Engineering%20for%20Data%20Scientists%20%26%20ML%20Engineers)
 - Specialized prompts for data analysis and visualization
@@ -53,7 +61,7 @@ This repository is organized into the following main sections to serve different
 - Differentiated instruction prompts
 - Student engagement and interactive learning activities
 
-### [AI Prompts For Marketing & Communications](./AI%20Prompts%20for%20Marketing%20%26%20Communications)
+### [AI Prompts For Marketing & Communications](./AI%20Prompts%20For%20Marketing%20%26%20Communications)
 - Content creation and copywriting templates
 - Social media campaign development and optimization
 - Brand voice consistency guidelines
@@ -61,7 +69,7 @@ This repository is organized into the following main sections to serve different
 - Marketing analytics interpretation and strategic planning
 - PR crisis management and response frameworks
 
-## Why Prompt Engineering Matters
+## 🔍 Why Prompt Engineering Matters
 
 Effective prompt engineering is essential to:
 
@@ -71,7 +79,7 @@ Effective prompt engineering is essential to:
 - **Maintain Control**: Guide the AI toward your specific needs and objectives
 - **Reduce Hallucinations**: Minimize incorrect information through careful constraints
 
-## Quick Start Guide
+## ⚡ Quick Start Guide
 
 ### Basic Prompt Structure
 
@@ -97,6 +105,20 @@ FORMAT: Use clear sections for each part and keep explanations concise.
 CONSTRAINTS: Avoid technical jargon and use accessible language.
 ```
 
+### Example Prompt (Business)
+
+```
+ROLE: Act as a strategic business consultant with expertise in digital transformation.
+
+CONTEXT: I'm a mid-size retail company (200 employees, $15M annual revenue) looking to modernize our operations and customer experience. We currently have minimal digital presence beyond a basic website and are losing market share to more tech-savvy competitors.
+
+TASK: Develop a phased digital transformation roadmap that prioritizes initiatives based on potential business impact and implementation difficulty. Include recommendations for technology infrastructure, organizational changes, and key performance indicators.
+
+FORMAT: Structure your response with an executive summary, followed by prioritized recommendations in three phases (immediate, mid-term, long-term). For each initiative, include estimated resource requirements, expected benefits, and potential risks.
+
+CONSTRAINTS: Focus on practical solutions that can be implemented with limited IT expertise and modest budget. Prioritize customer-facing improvements that will drive revenue growth.
+```
+
 ### Example Prompt (Data Science)
 
 ```
@@ -109,20 +131,6 @@ TASK: Help me develop a systematic approach to identify key features for a churn
 FORMAT: Structure your response with distinct sections for data exploration, feature creation, feature selection, and evaluation metrics. Provide code snippets in Python using pandas and scikit-learn where relevant.
 
 CONSTRAINTS: Focus on interpretable features that business stakeholders can understand. Prioritize techniques that work well with gradient boosting models, as that's our deployment target.
-```
-
-### Example Prompt (Research)
-
-```
-ROLE: Act as an expert research methodology consultant with expertise in mixed methods research.
-
-CONTEXT: I'm conducting a study on the impact of remote learning on student engagement in higher education during the COVID-19 pandemic.
-
-TASK: Help me design a mixed-methods research approach that combines quantitative surveys with qualitative interviews. Outline the key steps, potential challenges, and methodological considerations.
-
-FORMAT: Structure your response with distinct sections for research design, data collection, analysis approach, and validity considerations. Include bullet points for key steps.
-
-CONSTRAINTS: Focus on practical implementations that could be completed within a 6-month timeframe with limited resources. Address ethical considerations for researching potentially sensitive topics.
 ```
 
 ### Example Prompt (Marketing)
@@ -139,7 +147,7 @@ FORMAT: Organize your response into three sections (email, social, landing page)
 CONSTRAINTS: Keep the tone authentic and avoid greenwashing. Focus on benefits rather than features. Each copy element should be concise enough for mobile viewing.
 ```
 
-## Best Practices
+## 🛠️ Best Practices
 
 1. **Be Specific**: The more specific your prompt, the better the response
 2. **Provide Context**: Include relevant background information
@@ -150,7 +158,7 @@ CONSTRAINTS: Keep the tone authentic and avoid greenwashing. Focus on benefits r
 7. **Chain Prompts**: Break complex tasks into sequential prompts
 8. **Test Variations**: Try different approaches for best results
 
-## How to Contribute
+## 🤝 How to Contribute
 
 Contributions are welcome and greatly appreciated! Here's how you can contribute:
 
@@ -163,12 +171,12 @@ Contributions are welcome and greatly appreciated! Here's how you can contribute
 
 ### Contribution Guidelines
 
-- Add prompts in the appropriate section (Beginners/Data Scientists/Researchers/Students/Teachers/Marketing)
+- Add prompts in the appropriate section (Beginners/Business/Data Scientists/Researchers/Students/Teachers/Marketing)
 - Include clear explanations and examples
 - Test your prompts with at least one AI model before submitting
 - Document any limitations or special considerations
 
-## Additional Resources
+## 📚 Additional Resources
 
 - [OpenAI's Prompt Engineering Guide](https://platform.openai.com/docs/guides/prompt-engineering)
 - [Anthropic's Prompt Design Best Practices](https://docs.anthropic.com/claude/docs/prompt-engineering)
@@ -176,7 +184,7 @@ Contributions are welcome and greatly appreciated! Here's how you can contribute
 - [Gemini Prompt Design](https://ai.google.dev/docs/prompt_design)
 - [Awesome Prompt Engineering](https://github.com/promptslab/Awesome-Prompt-Engineering)
 
-## Getting Started
+## 📋 Getting Started
 
 ```bash
 # Clone the Repository
@@ -187,20 +195,20 @@ cd Prompt-Engineering
 # Navigate to the section that matches your needs
 ```
 
-## License
+## 📜 License
 
 This project is licensed under the [MIT License](LICENSE) - see the LICENSE file for details.
 
-## Contact
+## 📬 Contact
 
 For questions, suggestions, or feedback:
 - [Open an issue](https://github.com/AdilShamim8/Prompt-Engineering/issues)
-- Contact the repository owner: [Adil Shamim](https://adilshamim.me/)
+- Contact the repository owner: [AdilShamim8](https://github.com/AdilShamim8)
 
 ---
 
 <p align="center">
-  <sub>Last updated: August, 2025</sub>
+  <sub>Last updated: 2025-09-01</sub>
 </p>
 
 <p align="center">
