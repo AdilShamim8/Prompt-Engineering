@@ -203,7 +203,7 @@ This project is licensed under the [MIT License](LICENSE) - see the LICENSE file
 
 For questions, suggestions, or feedback:
 - [Open an issue](https://github.com/AdilShamim8/Prompt-Engineering/issues)
-- Contact the repository owner: [AdilShamim8](https://github.com/AdilShamim8)
+- Contact the repository owner: [Adil Shamim](https://adilshamim.me/)
 
 ---
 
