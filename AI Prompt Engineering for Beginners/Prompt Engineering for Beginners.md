@@ -272,7 +272,7 @@ To write effective prompts, it's helpful to understand how LLMs interpret and re
 
 **Key Implications for Prompt Design:**
 
-- **Order Matters**: Information presented earlier in the prompt has stronger influence on the response
+- **Order Matters**: Information presented earlier in the prompt has a stronger influence on the response
 - **Specificity Helps**: Detailed instructions reduce ambiguity and improve response quality
 - **Context Limitations**: Models have context windows (typically 4,000-128,000 tokens) that limit how much information they can consider
 - **Pattern Matching**: Models respond well to familiar structures and formats from their training data
@@ -336,7 +336,7 @@ Zero-shot prompting is the most straightforward approach to interacting with LLM
 - Simple, well-defined tasks
 - When you need quick results
 - For tasks the model has likely seen during training
-- When providing examples would be time-consuming or impractical
+- When providing examples, it would be time-consuming or impractical
 
 **Key Principles for Effective Zero-Shot Prompts:**
 
@@ -349,7 +349,7 @@ Start with precise verbs that indicate exactly what you want: "Summarize," "Expl
 **3. Provide Sufficient Context**
 Include relevant background information that helps the model understand the scope and requirements of the task.
 
-**📝 Try This - Zero-Shot Examples:**
+** Try This - Zero-Shot Examples:**
 
 **Example 1: Text Classification**
 
@@ -416,7 +416,7 @@ Few-shot prompting involves providing the model with 2-5 examples that demonstra
 2. **Examples** (2-5 demonstrations)
 3. **New input** to be processed
 
-**📝 Try This - Few-Shot Examples:**
+**Try This - Few-Shot Examples:**
 
 **Example 1: Product Description Generation**
 
@@ -521,7 +521,7 @@ Prompt: "Should our company launch a new product line? Here's the data:
 - Development cost: $500,000
 - Expected monthly revenue: $50,000  
 - Monthly operating costs: $20,000
-- Market research shows 60% success rate for similar products
+- Market research shows a 60% success rate for similar products
 
 Analyze this step by step and provide a recommendation."
 ```
