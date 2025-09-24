@@ -17,7 +17,7 @@ Whether you're a beginner, researcher, student, teacher, business professional, 
 
 This repository is organized into the following main sections to serve different user needs:
 
-### [AI Prompt Engineering for Beginners](https://github.com/AdilShamim8/Prompt-Engineering/tree/main/AI%20Prompt%20Engineering%20for%20Beginners)
+### [AI Prompt for Beginners](https://github.com/AdilShamim8/Prompt-Engineering/tree/main/AI%20Prompt%20for%20Beginners)
 - Fundamental concepts and terminology
 - Step-by-step guides for getting started
 - Simple and practical prompt examples
