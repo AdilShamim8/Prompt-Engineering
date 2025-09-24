@@ -32,7 +32,7 @@ This repository is organized into the following main sections to serve different
 - Financial forecasting and scenario planning
 - Leadership development and management coaching
 
-### [AI Prompt Engineering for Data Scientists & ML Engineers](https://github.com/AdilShamim8/Prompt-Engineering/tree/main/AI%20Prompt%20Engineering%20for%20Data%20Scientists%20%26%20ML%20Engineers)
+### [AI Prompt for Data Scientists & ML Engineers](https://github.com/AdilShamim8/Prompt-Engineering/tree/main/AI%20Prompt%20for%20Data%20Scientists%20%26%20ML%20Engineers)
 - Specialized prompts for data analysis and visualization
 - Model evaluation and interpretation techniques
 - Techniques for dataset exploration and cleaning
