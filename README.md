@@ -24,7 +24,7 @@ This repository is organized into the following main sections to serve different
 - Common mistakes and how to avoid them
 - Exercises and templates for hands-on learning
 
-### [AI Prompt Engineering for Business](https://github.com/AdilShamim8/Prompt-Engineering/tree/main/AI%20Prompt%20Engineering%20for%20Business)
+### [AI Prompt for Business](https://github.com/AdilShamim8/Prompt-Engineering/tree/main/AI%20Prompt%20for%20Business)
 - Strategic planning and decision-making prompts
 - Business analysis and competitive intelligence
 - Operational efficiency and process optimization
