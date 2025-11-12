@@ -208,7 +208,7 @@ For questions, suggestions, or feedback:
 ---
 
 <p align="center">
-  <sub>Last updated: September, 2025 </sub>
+  <sub>Last updated: November, 2025 </sub>
 </p>
 
 <p align="center">
