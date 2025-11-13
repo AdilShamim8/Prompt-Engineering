@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![GitHub stars](https://img.shields.io/github/stars/AdilShamim8/Prompt-Engineering?style=social)](https://github.com/AdilShamim8/Prompt-Engineering/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/AdilShamim8/Prompt-Engineering?style=social)](https://github.com/AdilShamim8/Prompt-Engineering/network/members)
-[![Last Updated](https://img.shields.io/badge/Last%20Updated-September%202025-brightgreen)](https://github.com/AdilShamim8/Prompt-Engineering/commits/main)
+[![Last Updated](https://img.shields.io/badge/Last%20Updated-November%202025-brightgreen)](https://github.com/AdilShamim8/Prompt-Engineering/commits/main)
 
 A comprehensive repository dedicated to mastering prompt engineering with curated guides, examples, and best practices for optimizing AI interactions across different domains.
 
@@ -206,10 +206,6 @@ For questions, suggestions, or feedback:
 - Contact the repository owner: [Adil Shamim](https://adilshamim.me/)
 
 ---
-
-<p align="center">
-  <sub>Last updated: November, 2025 </sub>
-</p>
 
 <p align="center">
   <sub>⭐ Star this repository if you find it useful! ⭐</sub>
