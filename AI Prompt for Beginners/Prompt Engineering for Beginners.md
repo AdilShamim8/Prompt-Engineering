@@ -171,10 +171,10 @@ Complete exercises in Section 9 alongside reading each chapter to reinforce lear
 
 **Interactive Elements:**
 
-- ** Try This**: Practical exercises to test concepts immediately
-- ** Common Mistake**: Warnings about frequent errors
-- ** Pro Tip**: Advanced insights from expert practitioners
-- ** Template**: Ready-to-use prompt templates
+- **Try This**: Practical exercises to test concepts immediately
+- **Common Mistake**: Warnings about frequent errors
+- **Pro Tip**: Advanced insights from expert practitioners
+- **Template**: Ready-to-use prompt templates
 
 ***
 
@@ -462,7 +462,7 @@ Place your best or most representative example last, as models tend to be influe
 **4. Include Edge Cases**
 If applicable, include examples that show how to handle unusual or boundary conditions.
 
-** Common Mistake:** Using too many examples (more than 5-7) can confuse the model and exceed context limits. Start with 2-3 high-quality examples.
+**Common Mistake:** Using too many examples (more than 5-7) can confuse the model and exceed context limits. Start with 2-3 high-quality examples.
 
 ### 3.3 Chain-of-Thought Prompting
 
