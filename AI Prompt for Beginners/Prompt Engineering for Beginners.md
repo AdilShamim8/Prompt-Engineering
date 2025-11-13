@@ -349,7 +349,7 @@ Start with precise verbs that indicate exactly what you want: "Summarize," "Expl
 **3. Provide Sufficient Context**
 Include relevant background information that helps the model understand the scope and requirements of the task.
 
-**📝 Try This - Zero-Shot Examples:**
+** Try This - Zero-Shot Examples:**
 
 **Example 1: Text Classification**
 
@@ -376,7 +376,7 @@ Prompt: "A restaurant wants to reduce food waste. Suggest three practical strate
 Expected Output: A list of three actionable strategies with brief explanations.
 ```
 
-**💡 Pro Tip:** Add the phrase "Let's think step by step" at the end of complex zero-shot prompts to encourage more thorough reasoning.[^14]
+** Pro Tip:** Add the phrase "Let's think step by step" at the end of complex zero-shot prompts to encourage more thorough reasoning.[^14]
 
 **Common Zero-Shot Patterns:**
 
@@ -539,7 +539,7 @@ Prompt: "A website is loading slowly. Given these symptoms, diagnose the likely 
 Work through the diagnostic process systematically."
 ```
 
-** Pro Tip:** For complex reasoning tasks, you can enhance chain-of-thought by asking the model to consider alternative approaches: "Show your reasoning step by step, then double-check your work using a different method."
+** Pro Tip:** For complex reasoning tasks, you can enhance the chain-of-thought by asking the model to consider alternative approaches: "Show your reasoning step by step, then double-check your work using a different method."
 
 ### 3.4 Role-Based Prompting
 
