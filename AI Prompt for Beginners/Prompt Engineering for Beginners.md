@@ -349,7 +349,7 @@ Start with precise verbs that indicate exactly what you want: "Summarize," "Expl
 **3. Provide Sufficient Context**
 Include relevant background information that helps the model understand the scope and requirements of the task.
 
-** Try This - Zero-Shot Examples:**
+**Try This - Zero-Shot Examples:**
 
 **Example 1: Text Classification**
 
@@ -376,7 +376,7 @@ Prompt: "A restaurant wants to reduce food waste. Suggest three practical strate
 Expected Output: A list of three actionable strategies with brief explanations.
 ```
 
-** Pro Tip:** Add the phrase "Let's think step by step" at the end of complex zero-shot prompts to encourage more thorough reasoning.[^14]
+**Pro Tip:** Add the phrase "Let's think step by step" at the end of complex zero-shot prompts to encourage more thorough reasoning.[^14]
 
 **Common Zero-Shot Patterns:**
 
@@ -416,7 +416,7 @@ Few-shot prompting involves providing the model with 2-5 examples that demonstra
 2. **Examples** (2-5 demonstrations)
 3. **New input** to be processed
 
-** Try This - Few-Shot Examples:**
+**Try This - Few-Shot Examples:**
 
 **Example 1: Product Description Generation**
 
@@ -512,7 +512,7 @@ Problem: A parking meter costs $1.50 per hour. How much for 2.5 hours?
 Solution:"
 ```
 
-** Try This - Chain-of-Thought Applications:**
+**Try This - Chain-of-Thought Applications:**
 
 **Example 1: Business Decision Analysis**
 
@@ -539,7 +539,7 @@ Prompt: "A website is loading slowly. Given these symptoms, diagnose the likely 
 Work through the diagnostic process systematically."
 ```
 
-** Pro Tip:** For complex reasoning tasks, you can enhance the chain-of-thought by asking the model to consider alternative approaches: "Show your reasoning step by step, then double-check your work using a different method."
+**Pro Tip:** For complex reasoning tasks, you can enhance the chain-of-thought by asking the model to consider alternative approaches: "Show your reasoning step by step, then double-check your work using a different method."
 
 ### 3.4 Role-Based Prompting
 
@@ -561,7 +561,7 @@ Role-based prompting involves assigning the AI a specific persona, profession, o
 [Any constraints or requirements]."
 ```
 
-** Try This - Role-Based Examples:**
+**Try This - Role-Based Examples:**
 
 **Example 1: Technical Expert**
 
@@ -607,7 +607,7 @@ Prompt: "You are a pediatrician explaining a medical condition to parents. Use l
 Prompt: "You are a software engineering mentor working with a junior developer. Adjust your explanations based on their questions - start with basic concepts but be ready to dive deeper if they show understanding."
 ```
 
-** Pro Tip:** Research real professionals in your target domain to understand their typical concerns, language, and priorities. This will help you create more authentic and effective role-based prompts.
+**Pro Tip:** Research real professionals in your target domain to understand their typical concerns, language, and priorities. This will help you create more authentic and effective role-based prompts.
 
 **Role Selection Guidelines:**
 
