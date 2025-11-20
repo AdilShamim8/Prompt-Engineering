@@ -96,7 +96,7 @@ This handbook provides a **progressive, practical resource for entrepreneurs, ma
 - **Why it works:** Clear task, details, role.[^11][^10]
 - **Use Case:** Quarterly reviews.
 - **Expert Variation:**
->Model impact of each cost-saving option on net profits over 3 years; present results with risk factors and implementation feasibility.
+>Model the impact of each cost-saving option on net profits over 3 years; present results with risk factors and implementation feasibility.
 
 ***
 
