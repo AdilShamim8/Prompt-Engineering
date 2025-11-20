@@ -80,7 +80,7 @@ Given a DataFrame schema and column types, suggest a list of the most useful uni
 ```
 
 - **Purpose:** Jump-starts EDA for new data practitioners.
-- **Why it works:** Concrete schema can be directly mapped to visual and statistical tasks.
+- **Why it works:** A Concrete schema can be directly mapped to visual and statistical tasks.
 - **Use Case:** Starting a Kaggle challenge with unfamiliar data.
 - **Expert Variation:**
 “Given sample data and business goals, devise a tailored EDA workflow, justify analysis decisions, and produce a Jupyter-ready pipeline using ydata-profiling or Sweetviz. Highlight key actionable insights.”
@@ -269,7 +269,7 @@ Given this time-series chart and related text dataset, propose a multimodal anal
 - **Why it works:** Incorporates both textual and visual context, requiring richer LLM instructions.
 - **Use Case:** Automated report creation with mixed input data.
 - **Expert Variation:**
-“Chain multimodal prompts to surface cross-domain insights (e.g., connect video features to time-series sensor stats in predictive maintenance). Propose schema for storing intermediate outputs.”
+“Chain multimodal prompts to surface cross-domain insights (e.g., connect video features to time-series sensor stats in predictive maintenance). Propose a schema for storing intermediate outputs.”
 
 ***
 
