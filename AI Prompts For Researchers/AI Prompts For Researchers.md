@@ -1,4 +1,3 @@
-
 ## AI Prompts for Researchers
 
 This guide provides specialized prompts to help researchers harness AI tools for advancing studies, streamlining workflows, and solving complex problems. The prompts are organized by research stages and objectives.
@@ -114,11 +113,5 @@ Advance professional growth and visibility.
 
 By integrating these prompts into their workflow, researchers can enhance productivity, foster innovation, and navigate complex challenges with AI as a collaborative partner.
 
-
-
-I'm on here if you want to follow: <br>
-GitHub -  https://github.com/AdilShamim8  <br>
-LinkedIn - https://www.linkedin.com/in/adilshamim8  <br>
-Twitter(x) - https://x.com/adil_shamim8 <br>
 
 
