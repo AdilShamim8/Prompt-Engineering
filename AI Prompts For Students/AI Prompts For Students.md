@@ -123,11 +123,3 @@ By leveraging these tailored AI prompts, students can transform their educationa
 [^4]: https://creately.com/guides/how-to-write-ai-prompts/
 
 
-
-
-*I'm on here if you want to follow:*
-GitHub -  https://github.com/AdilShamim8 
-LinkedIn - https://www.linkedin.com/in/adilshamim8 
-Twitter(x) - https://x.com/adil_shamim8
-
-
