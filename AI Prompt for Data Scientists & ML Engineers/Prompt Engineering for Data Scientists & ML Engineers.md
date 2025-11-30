@@ -212,7 +212,7 @@ Given this set of new research abstracts, cluster papers by research area, summa
 **Prompt:**
 
 ```
-Summarize the model results for executives: state key metrics (accuracy, AUC), list 3 most important features in plain English, and briefly describe business impact. Avoid technical jargon.
+Summarize the model results for executives: state key metrics (accuracy, AUC), list the 3 most important features in plain English, and briefly describe business impact. Avoid technical jargon.
 ```
 
 - **Purpose:** Bridges the gap between technical and business audiences.[^19][^1]
