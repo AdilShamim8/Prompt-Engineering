@@ -24,7 +24,7 @@ Requirements:
 - Include 4-6 core responsibilities in bullet format
 - Specify required experience (avoid age-coded terms)
 - Incorporate inclusive benefits appealing to diverse candidates
-- End with equal opportunity statement
+- End with an equal opportunity statement
 
 Compliance Check:
 - Ensure no discriminatory language based on protected characteristics
