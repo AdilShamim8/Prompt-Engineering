@@ -1,4 +1,3 @@
-
 ## Comprehensive Research Guide: Tailored AI Prompts for Teachers
 
 This guide provides educators with tailored AI prompts to enhance teaching, streamline lesson planning, and foster student engagement. These prompts are categorized to address various aspects of teaching and classroom management.
@@ -57,7 +56,7 @@ Prompts to support teachers in their own growth and learning.
 
 ### **6. Classroom Management**
 
-Prompts designed to help teachers maintain an organized and productive classroom environment.
+Prompts are designed to help teachers maintain an organized and productive classroom environment.
 
 - *Behavioral Strategies*: "Suggest strategies for managing disruptive behavior in middle school classrooms."
 - *Seating Arrangement Ideas*: "Recommend seating arrangements that promote collaboration among students during group activities."
