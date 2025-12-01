@@ -10,7 +10,7 @@ Research shows that **AI-assisted bias detection can reduce hiring discriminatio
 
 **C**ompliance-First: Ensure all outputs meet legal requirements
 **A**ccessible Language: Use clear, inclusive terminology for all audiences
-**R**isk Mitigation: Actively identify and eliminate potential bias
+**Risk Mitigation: Actively identify and eliminate potential bias
 **E**thical Standards: Maintain fairness and transparency in all communications
 
 ## Master Job Description Prompt Template
