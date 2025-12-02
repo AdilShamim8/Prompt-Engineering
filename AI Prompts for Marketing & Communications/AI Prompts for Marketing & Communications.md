@@ -94,7 +94,7 @@ Each email: Subject line, 200-300 words, one clear CTA, personalization elements
 ```
 Create detailed buyer personas for [product/service] based on this data: [customer information].
 
-For each persona provide:
+For each persona, provide:
 - Demographics: Age, income, location, job title
 - Psychographics: Values, interests, lifestyle preferences
 - Pain points: Top 3 challenges they face
@@ -207,7 +207,7 @@ Deliver:
 5. Sentence structure guidelines
 6. Examples across different scenarios
 
-Format as practical guide for team consistency.
+Format as a practical guide for team consistency.
 ```
 
 
