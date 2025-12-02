@@ -323,7 +323,7 @@ Create prompt variations for different customer segments:
 This comprehensive guide provides the foundation for implementing AI prompts effectively across marketing and communications. The key to success lies in consistent experimentation, measurement, and refinement to achieve optimal results that drive engagement, conversions, and business growth.
 
 --------------------
-I'm on here if you want to follow:
+I'm on here if you want to follow: <br>
 GitHub -  https://github.com/AdilShamim8 <br>
 LinkedIn - https://www.linkedin.com/in/adilshamim8 <br>
 Twitter(x) - https://x.com/adil_shamim8  <br>
