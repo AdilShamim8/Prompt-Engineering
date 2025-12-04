@@ -209,6 +209,6 @@ For questions, suggestions, or feedback:
 
 <p align="center">
   
-  <sub>⭐ Star this repository if you find it useful! ⭐</sub>
+  <sub> <h1>⭐ Star this repository if you find it useful!</h1> ⭐</sub>
   
 </p>
