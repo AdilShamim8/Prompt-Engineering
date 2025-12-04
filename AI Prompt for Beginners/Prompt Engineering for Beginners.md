@@ -257,7 +257,6 @@ Clear boundaries on what the AI should or shouldn't do.
 Example: "Do not recommend opening the computer case or handling internal components. If hardware replacement seems necessary, advise contacting a technician."
 ```
 
-
 ### 2.3 How Large Language Models Process Prompts
 
 To write effective prompts, it's helpful to understand how LLMs interpret and respond to instructions. Modern language models use a process called **autoregressive prediction** - they predict the next word (or token) based on all previous context, then use that prediction to inform the next word, continuing until the response is complete.[^9]
