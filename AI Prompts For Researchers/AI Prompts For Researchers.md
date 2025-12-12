@@ -112,6 +112,3 @@ Advance professional growth and visibility.
 4. **Ethical Alignment**: Verify AI-generated content for accuracy, bias, and compliance with academic standards.
 
 By integrating these prompts into their workflow, researchers can enhance productivity, foster innovation, and navigate complex challenges with AI as a collaborative partner.
-
-
-
