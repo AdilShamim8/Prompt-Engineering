@@ -237,7 +237,5 @@ This project is licensed under the [MIT License](LICENSE) - see the LICENSE file
 <sub>Building • Learning • Researching • Sharing</sub>
 
 <br/>
-
 ⭐ <strong>If this repository helped you, consider giving it a star!</strong> ⭐
-
 </div>
