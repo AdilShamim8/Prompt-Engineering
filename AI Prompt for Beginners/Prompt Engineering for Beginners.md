@@ -1338,6 +1338,80 @@ Transcript:
 
 In one short prompt this applies: task-first ordering, explicit definitions, a precise format, an escape hatch for ambiguity, and a built-in verification aid (the count).
 
+### 6.3 Debugging and Troubleshooting
+
+When a prompt misbehaves, random rewording rarely helps. Debugging a prompt follows the same discipline as debugging code: isolate the failure, form a hypothesis, change one variable, and re-test.[^34]
+
+**The Prompt Debugging Procedure:**
+
+```
+Step 1 — Reproduce: Run the prompt on the exact input that failed. Note the failure.
+Step 2 — Isolate: Strip the prompt to task-only. Does the failure persist?
+Step 3 — Bisect: Add sections back one at a time (context, rules, format, examples)
+         until the failure reappears. The last section added is usually the culprit.
+Step 4 — Hypothesize: State why that section causes the failure.
+Step 5 — Fix minimally: Change the smallest thing that addresses the hypothesis.
+Step 6 — Regression test: Re-run on the failed input AND on inputs that previously
+         worked, to confirm you fixed the bug without breaking something else.
+```
+
+**Case Studies in Prompt Debugging:**
+
+**Case 1: The Output Ignores a Rule**
+
+```
+Symptom: "The model keeps exceeding the 50-word limit."
+Bisect result: The limit is rule #7 of 9.
+Hypothesis: The rule is buried; later instructions overshadow it.
+Fix: Move the word limit into the task sentence and repeat it as the final line:
+     "...In exactly 50 words. Word count: 50."
+```
+
+**Case 2: The Format Is Right but the Content Is Wrong**
+
+```
+Symptom: Perfect tables, but the extracted dates are consistently off by one day.
+Hypothesis: Timezone or date-format ambiguity in the source material.
+Fix: Add an explicit rule: "All dates are in the format DD/MM/YYYY as written in
+     the source; do not convert timezones."
+```
+
+**Case 3: It Works in One Chat, Fails in Another**
+
+```
+Symptom: Same prompt, different results across sessions.
+Hypothesis: Accumulated conversation context (or custom instructions) is
+            influencing the output.
+Fix: Start a fresh session and re-run. If results stabilize, earlier context
+     was the cause — restate critical context inside the prompt itself.
+```
+
+**Case 4: The Model Refuses or Hedging Loops**
+
+```
+Symptom: The model apologizes and produces nothing usable.
+Hypothesis: The request overlaps a safety boundary, or the phrasing sounds
+            like a harmful request out of context.
+Fix: Provide legitimate framing and specifics — who you are, why you need it,
+     and what acceptable output looks like. If the refusal persists, the task
+     may genuinely violate the provider's policy; respect that boundary.
+```
+
+**When the Prompt Is Fine but the Model Is the Problem:**
+
+Sometimes the real issue is not wording at all. Consider these before more prompt surgery:
+
+- **The task needs current information** → use a web-connected tool or provide the data.
+- **The task needs exact math** → use a calculator or code execution.
+- **The task exceeds the context window** → summarize or chunk the input first.
+- **The provider changed the model** → re-test your library; outputs can shift after model updates, which is a known maintenance issue for production prompts.
+
+**Common Mistake:** Debugging by vibe—rewriting the whole prompt out of frustration. This destroys evidence and usually replaces one failure with a different one. Change one thing per test, exactly like debugging code.
+
+**Pro Tip:** For prompts you rely on regularly, keep three saved test inputs: one typical, one edge case, one that previously failed. Thirty seconds of regression testing after any change protects you from silent quality loss.
+
+***
+
 <span style="display:none">[^18][^19][^20][^21][^22][^23][^24][^25][^26][^27][^28][^29][^30][^31][^32][^33][^34][^35][^36][^37][^38][^39][^40][^41][^42][^43][^44][^45][^46][^47][^48][^49][^50][^51][^52]</span>
 
 
