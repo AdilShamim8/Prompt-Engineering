@@ -2029,6 +2029,37 @@ you would use this code as-is.
 [ ] AI's role disclosed where the audience would expect it
 ```
 
+### 10.3 Further Reading
+
+The following resources, already cited throughout this guide, are the ones most worth reading in full after finishing this guide. All links were part of this guide's original reference list.
+
+**Official Provider Documentation (read in this order):**
+
+1. **OpenAI — Prompt Engineering Guide** (platform.openai.com/docs/guides/prompt-engineering): the canonical reference for tactic-first guidance: write clear instructions, provide reference text, split complex tasks, give the model time to "think," and use external tools. [^4]
+2. **Anthropic — Prompt Engineering Overview** (docs.anthropic.com, Build with Claude): strong on structure—system prompts, XML-style tags for roles and data, prefilling, and chaining long tasks into steps. [^6]
+3. **AWS — Prompt engineering with Claude on Amazon Bedrock** (aws.amazon.com/blogs/machine-learning): an applied tour of role, context, and format techniques with worked examples. [^7]
+
+**Structured Technique Catalogs:**
+
+4. **Prompt Engineering Guide** (promptingguide.ai): the most complete public catalog of techniques—zero-shot, few-shot, CoT, self-consistency, ReAct, and beyond. Use it as a dictionary after this guide gives you the foundations. [^24]
+5. **Learn Prompting** (learnprompting.org): a free structured course path if you prefer a curriculum with exercises. [^14]
+
+**Evaluation and Reliability:**
+
+6. **Prompting Guide — Optimizing Prompts** (promptingguide.ai/guides/optimizing-prompts): how to iterate prompts methodically rather than randomly. [^21]
+7. **Langfuse — Prompt A/B Testing** (langfuse.com/docs/prompts/a-b-testing): how testing looks at team scale with tooling. [^49]
+
+**Practice Wisdom:**
+
+8. **Springboard-style worked examples** (springsapps.com/knowledge/prompt-engineering-examples-and-best-practices): a large set of before/after prompt rewrites—excellent pattern exposure. [^30]
+9. **OpenAI Help Center — Best Practices for Prompt Engineering with the API** (help.openai.com): the classic article; older, but the fundamentals it teaches still hold. [^2]
+
+**How to Read These Efficiently:**
+
+- Read one provider guide fully (pick the model you use most), skim the second.
+- Keep promptingguide.ai bookmarked as a lookup reference, not a cover-to-cover read.
+- Whenever a source disagrees with your experience, trust your test results—providers describe general tendencies, not laws.
+
 <span style="display:none">[^18][^19][^20][^21][^22][^23][^24][^25][^26][^27][^28][^29][^30][^31][^32][^33][^34][^35][^36][^37][^38][^39][^40][^41][^42][^43][^44][^45][^46][^47][^48][^49][^50][^51][^52]</span>
 
 
