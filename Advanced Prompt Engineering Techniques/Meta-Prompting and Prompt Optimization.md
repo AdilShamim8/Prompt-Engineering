@@ -2,6 +2,12 @@
 
 Using AI to design, critique, and improve prompts — treating the model as a collaborator in prompt engineering rather than only an executor of prompts. Done well, this surfaces blind spots and generates variations you would not have written. Done naively, it produces confident-sounding generic advice. The difference is in how you drive it.
 
+## Before You Start
+
+**Learning objectives** — after this guide you can: run the four meta-patterns (critique, generation, adversarial testing, library audit) with the inputs that make them produce specifics; avoid the recursion trap; and keep evaluation — not model opinion — as the acceptance test.
+
+**Prerequisites** — [Beginners guide](../AI%20Prompt%20for%20Beginners/Prompt%20Engineering%20for%20Beginners.md) fundamentals (Stage 2); you must already write structured prompts to critique them productively. Curriculum position: [§3.12](../CURRICULUM.md#tier-e--operate-and-maintain); the discipline that keeps meta-prompting honest is [Evaluation](./Prompt%20Evaluation%20and%20Testing.md).
+
 ## The Meta-Patterns
 
 **Pattern 1: Prompt Critique (the workhorse)**
@@ -86,3 +92,12 @@ Run periodically, applied by a human who knows the library's history — the mod
 ## The Recursion Trap
 
 Meta-prompting can nest: prompts that critique prompts that critique prompts. Each layer adds confident-sounding analysis and subtracts grounding. Two layers is the practical ceiling — a prompt, and a critique of the prompt. If the critique of the critique seems needed, the real problem is usually that you haven't tested anything yet. Stop abstracting; go run the prompt on real inputs.
+
+## Practice
+
+Take one prompt you actually use and run the critique pattern with real artifacts attached: your prompt, two real outputs it produced (one good, one bad), and the task description. Require numbered, ranked weaknesses with quoted evidence — reject any critique that could apply to any prompt (the genericity test). Then implement exactly the top-ranked fix and re-run on the same inputs. If the fix does not measurably change the weak output, the critique was flattery, not analysis — note what that teaches you about meta-prompting's acceptance test.
+
+## Further Reading
+
+- [Zamfirescu-Pereira et al. — Why Johnny Can't Prompt](https://arxiv.org/abs/2307.06873) — why end-users' natural prompting fails, and what tooling must compensate
+- [Anthropic — prompt generator / metaprompt recipe](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview) — provider's own meta-prompting tooling (reviewed 2026-10-20; verify against current docs)
