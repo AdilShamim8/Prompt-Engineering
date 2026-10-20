@@ -700,6 +700,94 @@ Meeting notes:
 
 **Pro Tip:** Read your prompt aloud and ask: could two reasonable people follow it in two different ways? If yes, the model can too. Add the missing detail—expected length, audience, format, or scope—before trying any fancier technique.
 
+### 4.2 Context Setting and Constraints
+
+Context is the background information the model needs to make your task unambiguous; constraints are the boundaries that keep the response usable. A prompt with a clear task but no context forces the model to guess who the audience is, what situation you are in, and what you already know—and different guesses produce very different outputs.[^24][^30]
+
+**The Five Most Useful Kinds of Context:**
+
+**1. Audience** — Who will read or use the output?
+
+```
+"Explain how compound interest works to a 15-year-old saving their first paycheck."
+```
+
+**2. Purpose** — What will the output be used for?
+
+```
+"This summary will be read aloud at a 10-minute team stand-up, so it must fit in one minute of speech."
+```
+
+**3. Situation** — What relevant facts surround the task?
+
+```
+"I'm a vegetarian beginner cook with a small kitchen, a single pan, and 20 minutes on weeknights."
+```
+
+**4. Prior work** — What have you already tried or decided?
+
+```
+"We already rejected option A (too expensive) and option B (too slow to ship). Evaluate the remaining options."
+```
+
+**5. Definitions** — What do your terms mean in this context?
+
+```
+"In this task, 'active users' means users who opened the app at least once in the last 7 days."
+```
+
+**How Much Context Is Enough?**
+
+Include the context that changes the answer, and leave out the rest. Before adding a paragraph of background, ask: "If the model did not know this, would the output be different?" If the answer is no, cut it. Overloaded context buries the task, wastes the context window, and can distract the model from your actual request.
+
+**Setting Effective Constraints:**
+
+Constraints work best when they are specific and verifiable:
+
+| Vague constraint | Effective constraint |
+| :-- | :-- |
+| "Keep it short" | "Answer in exactly 3 bullet points, max 15 words each" |
+| "Make it professional" | "Use a formal register; no slang, no exclamation marks" |
+| "Don't make stuff up" | "If you are not certain, say 'I don't know' instead of guessing" |
+| "Focus on the important parts" | "Cover only pricing and availability; ignore shipping and returns" |
+
+**Try This - Context and Constraints:**
+
+**Example 1: Same Task, Different Context**
+
+```
+Task: "Draft an apology to a customer whose order arrived three days late."
+
+Context A: "The customer is a long-term subscriber, the delay was our warehouse's fault,
+and we have issued a 20% refund."
+
+Context B: "The customer is new, the delay was caused by a shipping carrier strike outside
+our control, and no refund has been issued yet."
+```
+
+Notice how each context produces a completely different—yet appropriate—message. The task alone cannot do that.
+
+**Example 2: A Fully Framed Prompt**
+
+```
+Role: You are a fitness coach writing for absolute beginners.
+
+Context: Your reader is 45, has not exercised in 10 years, has mild knee pain,
+and owns no equipment.
+
+Task: Write a 15-minute daily walking and stretching routine for their first week.
+
+Constraints:
+- Avoid any exercise that strains the knees
+- Use encouraging, non-judgmental language
+- Format as a simple day-by-day table
+- Add one safety note about when to stop
+```
+
+**Common Mistake:** Assuming the model knows your situation because you discussed it in a previous conversation. Most tools do not carry context between separate sessions, and even within one session, important details can fade as the conversation grows. Restate critical context in the prompt itself whenever it matters to the result.
+
+**Pro Tip:** Keep a personal "context block" — 3–5 sentences describing your role, audience, and usual preferences — and paste it at the top of prompts where it applies. You get consistency across sessions without rewriting your situation every time.
+
 <span style="display:none">[^18][^19][^20][^21][^22][^23][^24][^25][^26][^27][^28][^29][^30][^31][^32][^33][^34][^35][^36][^37][^38][^39][^40][^41][^42][^43][^44][^45][^46][^47][^48][^49][^50][^51][^52]</span>
 
 
