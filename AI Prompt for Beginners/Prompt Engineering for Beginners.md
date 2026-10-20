@@ -946,6 +946,59 @@ Stop when the output reliably meets your need, not when it is perfect. If three 
 
 ***
 
+## 5. Practical Step-by-Step Examples
+
+This section applies everything from Sections 2–4 to four everyday use cases: creating content, analyzing data, working with code, and structured problem solving. Each workflow is presented as a sequence of prompts you can run in order, because real tasks are rarely well served by a single mega-prompt.[^48]
+
+### 5.1 Content Creation Workflows
+
+Content creation rewards a staged approach: plan first, draft second, polish third. Asking a model to "write a blog post" in one shot produces predictable, average content. Guiding it through outline, draft, and revision produces content you can actually publish.[^30]
+
+**Workflow 1: Blog Post in Three Prompts**
+
+```
+Step 1 — Plan:
+"I want to write a 1,000-word blog post for small business owners who are new to
+email marketing. Suggest 3 angles for the post. For each, give a working title and
+a 4-6 bullet outline. Do not write the post yet."
+
+Step 2 — Draft (after choosing an angle):
+"Write the first 400 words of the post using this outline: [paste outline].
+Audience: small business owners, beginners. Tone: practical and encouraging.
+Use short paragraphs and one concrete example. Do not use the phrase 'in today's
+digital world.'"
+
+Step 3 — Refine:
+"Here is my draft: [paste draft]. Improve the opening hook so it starts with a
+specific scenario instead of a general statement. Tighten any paragraph over
+60 words. Keep my voice—do not make it sound corporate."
+```
+
+Why this works: each step has one job, you stay in control of direction, and you can redo any single step without losing the rest.
+
+**Workflow 2: Repurposing Existing Content**
+
+```
+"Here is a blog post I wrote: [paste post]. Create from it:
+1. A 5-email newsletter series (subject line + 80-word body each)
+2. 5 social posts, one key idea each, under 100 words
+3. A short video script (60 seconds) hitting the core argument
+Adapt tone per channel: emails personal, social posts punchy, script conversational."
+```
+
+**Workflow 3: Beating the Blank Page**
+
+```
+"I need to write a customer apology for a delayed shipment. Before writing anything,
+ask me 3 questions that would most improve the message. Wait for my answers."
+```
+
+Asking the model to gather requirements first is a simple, powerful pattern: it surfaces context you forgot to provide.
+
+**Common Mistake:** Publishing AI drafts unedited. Models produce plausible text, not verified text—facts, statistics, names, and claims in generated content must be checked before publication (see Section 7 on responsible use).
+
+**Pro Tip:** Keep a "style card" for recurring content: your audience, voice, banned phrases, and two sample paragraphs you like. Paste it at the top of content prompts for consistently on-brand output without repeating yourself.
+
 <span style="display:none">[^18][^19][^20][^21][^22][^23][^24][^25][^26][^27][^28][^29][^30][^31][^32][^33][^34][^35][^36][^37][^38][^39][^40][^41][^42][^43][^44][^45][^46][^47][^48][^49][^50][^51][^52]</span>
 
 
