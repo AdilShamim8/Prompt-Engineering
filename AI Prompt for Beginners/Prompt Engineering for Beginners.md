@@ -1822,6 +1822,51 @@ Write a role-based prompt for a "patient math tutor for a struggling 12-year-old
 
 Pick a prompt you actually use. Collect 8 real inputs for it (2 typical, 2 edge, 1 adversarial, 3 others). Score current outputs 1–5 on correctness, completeness, and format. You now have a baseline—improve the prompt until the average is 4+.
 
+### 9.3 Advanced Projects
+
+These projects take one to several hours each and produce artifacts you can keep using. They are the difference between knowing the techniques and owning a workflow.
+
+**Project 1: Your Personal Prompt Library**
+
+Deliverable: a structured document (or notes database) with 10+ prompts you have personally tested, following the Section 8.1 format: name, purpose, version, prompt text, notes, known issues. Include at least 3 converted into fill-in templates with {VARIABLES}.
+
+**Acceptance test:** hand the file to a friend or colleague. Without your help, can they pick the right prompt for a task and get a good result? If not, your entries are missing context—fix the entries, not the friend.
+
+**Project 2: A Domain Assistant**
+
+Deliverable: a reusable "assistant brief" for one domain you work in (e.g., contract review, recipe planning, code review). It must contain: the role, 3–5 standing rules, required output format, a verification step, and two worked example interactions.
+
+```
+Sample brief skeleton:
+Role: You are a first-pass reviewer of freelance contracts for a solo designer.
+Standing rules:
+1. Flag only issues that materially affect scope, payment, or rights.
+2. Quote the exact clause, then explain the risk in plain language.
+3. Never say "consult a lawyer" as your only advice—state WHAT a lawyer should check.
+Output format: table with columns Clause | Risk | Suggested revision.
+Verification: end with "I did not find issues in these areas: [list]."
+```
+
+**Acceptance test:** run it on three real documents; confirm it catches seeded issues you planted (an auto-renewal clause, a kill fee, a liability cap).
+
+**Project 3: An Evaluation Harness (Manual Version)**
+
+Deliverable: a spreadsheet that tracks, for one important prompt: 10 test inputs, the rubric scores of 2 variants, and the decision. No coding required—but keep it disciplined: one variable changed between variants, scores recorded before looking at which variant produced which output where possible.
+
+**Acceptance test:** you can show someone else the sheet and they can reconstruct why you chose the winner.
+
+**Project 4: The Red-Team Notebook**
+
+Deliverable: a collection of 10 inputs that break prompts you rely on—ambiguous phrasings, buried instructions, off-topic data, enormous inputs, empty inputs—and the prompt hardening that fixed each (escape hatches, delimiters, fallback rules).
+
+**Acceptance test:** every hardened prompt survives all 10 hostile inputs without producing garbage.
+
+**Project 5: Teach It Forward**
+
+Deliverable: a one-page cheat sheet for a colleague or family member covering: the 5-part prompt anatomy (Section 2.2), three techniques that give the most value (specificity, format, iteration), and two mistakes to avoid. Teaching forces consolidation—this project is secretly for you.
+
+**Acceptance test:** they use it unprompted (pun intended) the following week, and their results improve.
+
 <span style="display:none">[^18][^19][^20][^21][^22][^23][^24][^25][^26][^27][^28][^29][^30][^31][^32][^33][^34][^35][^36][^37][^38][^39][^40][^41][^42][^43][^44][^45][^46][^47][^48][^49][^50][^51][^52]</span>
 
 
