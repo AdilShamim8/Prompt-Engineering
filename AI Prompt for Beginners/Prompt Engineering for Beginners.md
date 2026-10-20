@@ -1671,6 +1671,56 @@ Using one model to grade another's outputs is common for scale, and it correlate
 
 **Pro Tip:** Store test inputs and expected-outcome notes together with each prompt entry in your library (Section 8.1). Prompt + tests + notes is the complete unit of reusable prompt engineering; a prompt alone is half an asset.
 
+### 8.3 A/B Testing Methodology
+
+A/B testing answers one question rigorously: which of two prompt variants performs better on my tasks? The method is borrowed from web experimentation—change one thing, expose both variants to equivalent inputs, and let results decide. Done casually, comparisons mislead; done carefully, they compound into a steadily improving prompt library.[^43][^40]
+
+**Step-by-Step: A Fair Prompt Comparison**
+
+```
+Step 1 — Define ONE measurable success criterion before testing.
+          ("Extracts the correct owner for ≥ 9 of my 10 test cases")
+Step 2 — Create exactly two variants (A and B) differing in ONE dimension.
+          (B = A + two few-shot examples. Nothing else changes.)
+Step 3 — Run BOTH variants on the SAME test inputs.
+Step 4 — Score outputs with the rubric from Section 8.2, blind to which
+          variant produced them if possible.
+Step 5 — Record results in your library: variant, scores, decision, date.
+Step 6 — Adopt the winner; keep the loser's entry as evidence of what
+          you already ruled out.
+```
+
+**What You Can A/B Test:**
+
+- With vs. without few-shot examples
+- Different role assignments ("senior analyst" vs. none)
+- Instruction-first vs. context-first ordering
+- Table vs. prose output format
+- Strict vs. permissive word limits
+- Zero-shot CoT trigger vs. none
+
+**Common Experimental Errors:**
+
+**Testing on one input.** A single dramatic result is an anecdote. Use the 5–10 case test set from Section 8.2, because variance between runs is real—models are probabilistic, and the same prompt can produce different outputs.
+
+**Changing multiple things.** If variant B has new examples AND a new format, a win tells you nothing about which change caused it. One variable per comparison.
+
+**Letting expectations score the outputs.** If you know which output came from your preferred variant, you will unconsciously grade it higher. Score anonymously—paste outputs into a neutral document, shuffle, then grade.
+
+**Ignoring ties.** If results are close, either variant is fine; pick one and move on. Chasing tiny differences with big prompt complexity is a classic trap.
+
+**Forgetting cost and latency.** A variant that scores marginally higher but doubles token usage may be a net loss in production. Record length and run count alongside quality.
+
+**Sequential (Batch) A/B for Manual Testing**
+
+You do not need tooling to start. In one session: run variant A on all 10 saved inputs, save outputs to a file; then run variant B on the same inputs; then score both files side by side. Dedicated platforms and evaluation frameworks can automate this loop, randomize order, and track history—valuable at team scale, unnecessary for your first ten experiments.[^49][^46]
+
+**Common Mistake:** Declaring a winner from memory. "B felt better last week" is not a result. The record in your prompt library—inputs, scores, decision—is what turns individual experiments into institutional knowledge.
+
+**Pro Tip:** Keep a "findings" note in your library of everything A/B testing has taught you (e.g., "examples beat adjectives for tone control in my tasks"; "word limits last line = better compliance"). These transferable findings are often worth more than any single prompt.
+
+***
+
 <span style="display:none">[^18][^19][^20][^21][^22][^23][^24][^25][^26][^27][^28][^29][^30][^31][^32][^33][^34][^35][^36][^37][^38][^39][^40][^41][^42][^43][^44][^45][^46][^47][^48][^49][^50][^51][^52]</span>
 
 
