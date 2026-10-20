@@ -61,6 +61,13 @@ This repository is organized into the following main sections to serve different
 - Differentiated instruction prompts
 - Student engagement and interactive learning activities
 
+### [AI Prompts for Human Resources (HR)](./AI%20Prompts%20for%20Human%20Resources%20%28HR%29)
+- Compliance-first job description and recruitment prompts
+- Bias detection and inclusive language review frameworks
+- Structured interview and candidate evaluation templates
+- HR policy development and communication assistance
+- Privacy-aware people analytics and reporting
+
 ### [AI Prompts For Marketing & Communications](./AI%20Prompts%20For%20Marketing%20%26%20Communications)
 - Content creation and copywriting templates
 - Social media campaign development and optimization
