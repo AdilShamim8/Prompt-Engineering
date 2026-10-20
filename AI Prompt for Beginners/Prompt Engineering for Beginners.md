@@ -618,6 +618,88 @@ Prompt: "You are a software engineering mentor working with a junior developer. 
 ***
 
 This comprehensive foundation in core concepts and fundamental techniques provides the essential building blocks for effective prompt engineering. In the next sections, we'll explore advanced techniques and practical applications that build upon these fundamentals.
+
+***
+
+## 4. Advanced Techniques
+
+This section builds on the fundamentals with four skills that separate casual users from proficient prompt engineers: engineering precise instructions, managing context and constraints, controlling output formatting, and refining prompts through deliberate iteration. Each technique includes worked examples you can adapt immediately.
+
+### 4.1 Instruction Engineering
+
+Instruction engineering is the practice of writing directives so clear and unambiguous that the model has only one reasonable interpretation of what you want. Most weak prompts are not missing cleverness—they are missing precision. Official guidance from model providers consistently ranks clear, specific instructions as the single highest-impact improvement you can make to any prompt.[^22][^37]
+
+**Core Principles of Instruction Engineering:**
+
+**1. Lead with the Task**
+
+State what you want before you explain why. Models weight the beginning of the prompt heavily, so the core instruction should appear before lengthy background material.
+
+```
+Weak: "I've been thinking about our quarterly numbers, and our competitors seem to be
+doing better, and I wonder if you could maybe summarize..."
+
+Strong: "Summarize this quarterly sales report into 5 bullet points for executives,
+highlighting revenue changes, risks, and recommended actions."
+```
+
+**2. Use Direct Action Verbs**
+
+Start instructions with precise verbs—Summarize, List, Compare, Rewrite, Classify, Extract, Draft—instead of vague openers like "Can you help me think about..." Ambiguous verbs produce ambiguous outputs.[^22]
+
+**3. Say What to Do, Not Only What to Avoid**
+
+Positive instructions are easier to follow than negative ones. Where possible, replace "Don't be too technical" with "Explain in plain language a non-specialist can understand." Keep negative constraints for true prohibitions, and pair each prohibition with the preferred behavior.
+
+**4. Separate Instructions from Data**
+
+When your prompt includes content to be processed (a document, a dataset, a user message), set it apart with clear delimiters such as triple quotes, XML-style tags, or a labeled block. This makes the boundary between "rules" and "material" explicit and reduces the chance the model treats your data as new instructions.[^22]
+
+```
+Summarize the text between <document> tags in 3 sentences.
+
+<document>
+[Paste your text here]
+</document>
+```
+
+**5. Number and Prioritize Requirements**
+
+When a prompt has several requirements, number them and state which matter most. If requirements can conflict (for example, "be comprehensive" versus "be brief"), tell the model which one wins.
+
+**Try This - Instruction Engineering:**
+
+**Example 1: Rewriting a Vague Prompt**
+
+```
+Vague: "Write something about our new product."
+
+Precise: "Write a 120-word product announcement email for existing customers about our
+new project management app. Emphasize two features: shared timelines and automated
+status reports. Use a warm, professional tone. End with a single call to action that
+invites users to try the free 14-day trial."
+```
+
+**Example 2: Structured, Delimited Instructions**
+
+```
+You are an assistant that extracts action items from meeting notes.
+
+Rules:
+1. Each action item must include a task, an owner (if mentioned), and a due date (if mentioned).
+2. Ignore small talk and general discussion.
+3. Output a numbered list. If no action items exist, reply exactly: "No action items found."
+
+Meeting notes:
+"""
+[Paste meeting notes here]
+"""
+```
+
+**Common Mistake:** Cramming the task, the context, and the data into one long paragraph. When a prompt feels dense, break it into labeled parts (Task, Context, Rules, Data, Output format). Structure is free and almost always improves results.
+
+**Pro Tip:** Read your prompt aloud and ask: could two reasonable people follow it in two different ways? If yes, the model can too. Add the missing detail—expected length, audience, format, or scope—before trying any fancier technique.
+
 <span style="display:none">[^18][^19][^20][^21][^22][^23][^24][^25][^26][^27][^28][^29][^30][^31][^32][^33][^34][^35][^36][^37][^38][^39][^40][^41][^42][^43][^44][^45][^46][^47][^48][^49][^50][^51][^52]</span>
 
 
