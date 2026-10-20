@@ -6,6 +6,8 @@
 
 Here is a collection of tailored AI prompts designed to help students utilize artificial intelligence effectively for learning, creativity, and problem-solving. These prompts are categorized based on their purpose and application.
 
+> **Companion guides in this directory:** [Study Techniques & Active Recall](./Study%20Techniques%20%26%20Active%20Recall%20Prompts.md) · [Exam Preparation](./Exam%20Preparation%20Prompts.md) · [Academic Integrity & AI](./Academic%20Integrity%20%26%20AI%20Prompts.md) · [Note-Taking & Organization](./Note-Taking%20%26%20Organization%20Prompts.md) · [Writing & Research Skills](./Writing%20%26%20Research%20Skills%20Prompts.md) · [STEM Problem-Solving](./STEM%20Problem-Solving%20Prompts.md) · [Group Work & Collaboration](./Group%20Work%20%26%20Collaboration%20Prompts.md)
+
 ---
 
 ### **1. Learning and Study Assistance**
