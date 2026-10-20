@@ -2,6 +2,8 @@
 
 This guide provides educators with tailored AI prompts to enhance teaching, streamline lesson planning, and foster student engagement. These prompts are categorized to address various aspects of teaching and classroom management.
 
+> **Companion guides in this directory:** [Accessibility & Inclusive Design](./Accessibility%20%26%20Inclusive%20Design%20Prompts.md) · [Assessment & Feedback](./Assessment%20%26%20Feedback%20Prompts.md) · [Student Privacy & Responsible AI Use](./Student%20Privacy%20%26%20Responsible%20AI%20Use.md) · [Differentiated Instruction](./Differentiated%20Instruction%20Prompts.md) · [AI Literacy for Students](./AI%20Literacy%20for%20Students%20Prompts.md) · [Classroom Discussion & Engagement](./Classroom%20Discussion%20%26%20Engagement%20Prompts.md)
+
 ---
 
 ### **1. Lesson Planning and Curriculum Development**
