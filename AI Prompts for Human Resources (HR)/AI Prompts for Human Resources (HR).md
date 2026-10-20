@@ -2,6 +2,8 @@
 
 Based on comprehensive research of 170+ sources and industry best practices, I've created a specialized AI prompt framework for HR professionals focused on creating professional, unbiased, and legally compliant content.
 
+> **Companion guides in this directory:** [Onboarding & Offboarding](./Onboarding%20%26%20Offboarding%20Prompts.md) · [Performance Management & Feedback](./Performance%20Management%20%26%20Feedback%20Prompts.md) · [Learning & Development](./Learning%20%26%20Development%20Prompts.md) · [Employee Relations & Conflict Resolution](./Employee%20Relations%20%26%20Conflict%20Resolution%20Prompts.md) · [Compensation & Benefits Communication](./Compensation%20%26%20Benefits%20Communication%20Prompts.md) · [HR Analytics & Privacy](./HR%20Analytics%20%26%20Privacy%20Prompts.md)
+
 ## Key Research Findings
 
 Research shows that **AI-assisted bias detection can reduce hiring discrimination by 25%**, while **inclusive job descriptions increase qualified applicant diversity by 25%**. However, success depends entirely on carefully engineered prompts that prioritize compliance and objectivity.[^1][^2][^3]
