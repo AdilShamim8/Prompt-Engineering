@@ -2,6 +2,12 @@
 
 Few-shot prompting — showing the model 2–5 worked examples — is the highest-leverage technique for controlling format, style, and edge-case behavior. It is also the technique most often used badly: examples chosen for convenience rather than strategy. This guide covers the selection and engineering of examples.
 
+## Before You Start
+
+**Learning objectives** — after this guide you can: select examples that sit on decision boundaries instead of easy cases; format examples for consistent pattern-following; recognize the five example pathologies and their fixes; and grow an example set error-driven, like an engineer.
+
+**Prerequisites** — the [Beginners guide](../AI%20Prompt%20for%20Beginners/Prompt%20Engineering%20for%20Beginners.md) fundamentals (§3 covers few-shot basics). Curriculum position: [§3.2](../CURRICULUM.md#tier-a--make-outputs-usable); pairs naturally with [Structured Outputs](./Structured%20Outputs%20and%20Schema%20Prompting.md) — schemas constrain the shape, examples teach the judgment.
+
 ## What Examples Actually Do
 
 Examples communicate what instructions cannot: the exact shape of "good," the handling of ambiguous cases, and the register of the output. Instructions say "extract the key claims"; examples show what counts as key. When your instructions and your examples disagree, **the examples usually win** — which makes them load-bearing, not decorative.
@@ -80,3 +86,12 @@ This error-driven example curation compounds: your example set becomes a memory 
 - **Task the model already does canonically** (sentiment, summarization of standard documents): examples can even hurt by over-narrowing
 - **Reasoning tasks**: examples of conclusions without reasoning can suppress the model's own chain of thought — prefer explicit reasoning instructions (see the Beginners guide, Section 3.3)
 - **Very long outputs**: two full-length examples consume context; use structural skeletons instead
+
+## Practice
+
+Write a zero-shot instruction for classifying your own work items (emails, tickets, tasks — fictional stand-ins), run it on 10 inputs, and record the errors. Then add exactly three examples chosen against the selection checklist — one typical, one boundary, one fallback — and re-run. Compare error counts and note which specific errors the examples fixed and which they did not touch. The guided version with edge-case testing is [Lab 2](../labs/lab-02-few-shot-and-structured-outputs.md).
+
+## Further Reading
+
+- [Few-shot task definition template](../templates/universal-prompt-templates.md#few-shot-task-definition) — the copy-paste skeleton
+- [Anthropic — prompting best practices](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview): effective example use (reviewed 2026-10-20; provider-specific)
