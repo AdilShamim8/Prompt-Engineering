@@ -1867,6 +1867,62 @@ Deliverable: a one-page cheat sheet for a colleague or family member covering: t
 
 **Acceptance test:** they use it unprompted (pun intended) the following week, and their results improve.
 
+***
+
+## 10. Reference Materials
+
+This final section collects the reference layers of the guide: the vocabulary, the reusable templates, and the sources worth reading next.
+
+### 10.1 Glossary
+
+**A/B testing** — Comparing two prompt variants that differ in exactly one dimension, on the same inputs, to decide which to adopt. (Section 8.3)
+
+**Chain-of-thought (CoT) prompting** — Asking the model to reason step by step before answering, improving reliability on multi-step problems. (Section 3.3)
+
+**Context** — The background information (audience, purpose, situation, prior work, definitions) a prompt supplies so the model does not have to guess. (Section 4.2)
+
+**Context window** — The maximum amount of text (prompt plus response) a model can process at once, measured in tokens.
+
+**Constraint** — An explicit boundary on the output: length, scope, tone, format, or exclusions.
+
+**Delimiter** — A marker (triple quotes, XML-style tags, labeled blocks) separating instructions from data inside a prompt.
+
+**Escape hatch** — An instruction telling the model what to do when it cannot fulfill the request (e.g., "reply 'Not found'") instead of guessing.
+
+**Few-shot prompting** — Including two to five worked examples in the prompt to demonstrate the desired input-output pattern. (Section 3.2)
+
+**Fine-tuning** — Additional training of a model on curated examples; an alternative to prompting for consistent style or domain behavior. Distinct from prompting: you cannot fine-tune through a chat window.
+
+**Hallucination** — Confident output that is fabricated—untrue facts, invented citations, nonexistent features. The reason verification is non-negotiable.
+
+**In-context learning** — A model's ability to adapt to a task from instructions and examples within the prompt, without retraining.
+
+**LLM (large language model)** — The class of AI systems behind ChatGPT, Claude, Gemini, and similar tools; trained to predict the next token over vast text corpora.
+
+**Multimodal model** — A model that accepts or produces more than text, such as images or audio.
+
+**Prompt** — The full input you give a model: instructions, context, examples, and data.
+
+**Prompt chaining** — Sequencing multiple prompts so each output feeds the next, instead of one mega-prompt. (Section 9.2, Challenge 1)
+
+**Prompt injection** — An attack where untrusted text inside data you provide contains instructions attempting to hijack the model. (Section 7.3)
+
+**Prompt library** — A structured personal or team collection of tested prompts with notes and versions. (Section 8.1)
+
+**RAG (retrieval-augmented generation)** — An architecture that retrieves relevant documents and supplies them in the prompt so answers are grounded in specific sources.
+
+**Regression testing** — Re-running a prompt's full test set after any change, to catch improvements that silently broke other cases. (Section 8.2)
+
+**Role-based prompting** — Assigning the model a persona or expertise area to shape vocabulary, tone, and depth. (Section 3.4)
+
+**System prompt** — Standing instructions set at the application level that apply before every user message; in chat tools, often exposed as "custom instructions."
+
+**Temperature** — A generation setting controlling randomness; lower is more deterministic. Not a prompt element, but a common source of "why is it different each time."
+
+**Token** — The unit models read and write; roughly a short word or word fragment. Token counts drive cost and context limits.
+
+**Zero-shot prompting** — Instructing the model with no examples, relying on instruction clarity alone. (Section 3.1)
+
 <span style="display:none">[^18][^19][^20][^21][^22][^23][^24][^25][^26][^27][^28][^29][^30][^31][^32][^33][^34][^35][^36][^37][^38][^39][^40][^41][^42][^43][^44][^45][^46][^47][^48][^49][^50][^51][^52]</span>
 
 
