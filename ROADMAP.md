@@ -10,7 +10,7 @@ This file tracks what exists, what is planned, and what comes next. The curricul
 | Stage 1 — Foundations | Beginners guide §1–6 (concepts, techniques, worked examples, pitfalls) | Complete |
 | Stage 2 — Responsible use | Beginners guide §7–10 (ethics, tools, exercises, reference) | Complete |
 | Stage 3 — Core techniques | 13 advanced guides, tiers A–E (CURRICULUM §3.1–3.13) | Complete |
-| Stage 3 — Guide standards | Objectives/prerequisites headers and practice sections per guide | In progress |
+| Stage 3 — Guide standards | Objectives/prerequisites headers and practice sections per guide | Complete |
 | Stage 4 — Domain collections | 8 collections: Business, Data Science, Researchers, Students, Teachers, HR, Marketing | Complete |
 | Stage 5 — Labs | 3 labs (baselines, few-shot + structured outputs, evaluation) | Complete — more welcome |
 | Templates | Universal and advanced reusable prompt templates | Complete — more welcome |
