@@ -2,6 +2,8 @@
 
 Based on comprehensive research across 85+ sources, I've created a detailed guide for AI prompt engineering specifically designed for marketing and communications professionals. This resource addresses your exact needs for generating engaging copy, crafting compelling narratives, and tailoring messages for different audiences.
 
+> **Companion guides in this directory:** [SEO & Content Strategy](./SEO%20%26%20Content%20Strategy%20Prompts.md) · [Crisis Communications & PR](./Crisis%20Communications%20%26%20PR%20Prompts.md) · [Marketing Analytics & Testing](./Marketing%20Analytics%20%26%20Testing%20Prompts.md) · [Email & Lifecycle Marketing](./Email%20%26%20Lifecycle%20Marketing%20Prompts.md) · [Social Media Strategy](./Social%20Media%20Strategy%20Prompts.md) · [Ethical Marketing & Claims Verification](./Ethical%20Marketing%20%26%20Claims%20Verification%20Prompts.md)
+
 ## Key Research Findings
 
 The research reveals that **companies leveraging AI in marketing see 20-30% higher ROI** on campaigns compared to traditional methods. However, success depends entirely on effective prompt engineering - the art of crafting clear, specific instructions that guide AI systems to produce relevant, on-brand content.[^1]
