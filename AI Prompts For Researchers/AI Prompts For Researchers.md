@@ -2,6 +2,8 @@
 
 This guide provides specialized prompts to help researchers harness AI tools for advancing studies, streamlining workflows, and solving complex problems. The prompts are organized by research stages and objectives.
 
+> **Companion guides in this directory:** [Citation Verification & Literature Integrity](./Citation%20Verification%20%26%20Literature%20Integrity%20Prompts.md) · [Literature Review & Synthesis](./Literature%20Review%20%26%20Synthesis%20Prompts.md) · [Research Question & Methodology](./Research%20Question%20%26%20Methodology%20Prompts.md) · [Systematic Review Support](./Systematic%20Review%20Support%20Prompts.md) · [Academic Writing & Revision](./Academic%20Writing%20%26%20Revision%20Prompts.md) · [Research Data Management](./Research%20Data%20Management%20Prompts.md) · [Responsible AI Use in Research](./Responsible%20AI%20Use%20in%20Research.md)
+
 ---
 
 ### **1. Literature Review \& Knowledge Synthesis**
