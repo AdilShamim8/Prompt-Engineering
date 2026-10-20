@@ -1271,6 +1271,73 @@ Before running an important prompt, confirm:[^44]
 
 If any answer is "no," fix that one thing before running. In practice this check eliminates the majority of weak-prompt problems before they occur.
 
+### 6.2 Best Practices for Effective Prompting
+
+The practices below condense provider guidance and community experience into habits you can apply to every prompt.[^37][^24] They are deliberately short—each one exists because skipping it reliably causes problems.
+
+**1. Put the Task First, Context Second, Examples Last**
+
+Order information by importance to the model: what to do, the situation, then demonstrations. Critical constraints benefit from being restated at the end, where they are hard to lose.
+
+**2. Be Specific About Everything You Care About**
+
+Length, audience, tone, format, scope, and exclusions. Anything left unspecified becomes the model's choice, and the model's default rarely matches your preference.
+
+**3. Show, Don't Just Tell**
+
+When words fail, paste a 20-line example of a good output. One concrete example outperforms a paragraph of adjectives ("make it punchy but professional").
+
+**4. Ask for One Thing at a Time**
+
+Chain small prompts for big tasks. You review each step, catch errors early, and keep every output reviewable.
+
+**5. Request Uncertainty Signals**
+
+Add: "If you're unsure or the information may be outdated, say so explicitly." This single line noticeably reduces confident errors—though it does not eliminate them, so verification is still required.
+
+**6. Give an Escape Hatch**
+
+Tell the model what to do when it cannot comply: "If the document does not contain the answer, reply 'Not found in document' rather than guessing." Without an escape hatch, models improvise.
+
+**7. Keep a Version History of Important Prompts**
+
+Label variants (v1, v2...), keep notes on what changed and why, and record which version you adopted. This turns prompt writing from folk art into an improvable practice.
+
+**8. Match the Tool to the Task**
+
+Use reasoning modes for hard problems, code modes for programming, web-connected modes for current information, and spreadsheets for arithmetic. A perfect prompt cannot compensate for the wrong tool.
+
+**9. Test on Edge Cases Before Scaling**
+
+Run your prompt on the weirdest input you expect—an empty field, a two-page answer where one line is normal, a non-native-speaker phrasing. Prompts that work on typical inputs often break on edges.
+
+**10. Stay the Editor-in-Chief**
+
+AI output is a first draft from a fast, confident, occasionally wrong assistant. You remain responsible for everything you ship under your name. Read, verify, and revise before use.
+
+**A Worked Example of the Practices Combined:**
+
+```
+Task: Extract every commitment made in this meeting transcript into a table.
+
+Context: I will follow up with each owner next week; "will" and "should" both
+count as commitments, but "might" does not.
+
+Format: Columns: Quote (verbatim), Owner, Commitment (paraphrased), Deadline (or "none").
+
+Rules:
+1. If the same commitment appears twice, list it once.
+2. If the owner is ambiguous, write "unclear" — do not guess.
+3. End with a count of commitments per owner.
+
+Transcript:
+"""
+[Paste transcript]
+"""
+```
+
+In one short prompt this applies: task-first ordering, explicit definitions, a precise format, an escape hatch for ambiguity, and a built-in verification aid (the count).
+
 <span style="display:none">[^18][^19][^20][^21][^22][^23][^24][^25][^26][^27][^28][^29][^30][^31][^32][^33][^34][^35][^36][^37][^38][^39][^40][^41][^42][^43][^44][^45][^46][^47][^48][^49][^50][^51][^52]</span>
 
 
