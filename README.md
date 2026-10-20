@@ -68,7 +68,7 @@ This repository is organized into the following main sections to serve different
 - HR policy development and communication assistance
 - Privacy-aware people analytics and reporting
 
-### [AI Prompts For Marketing & Communications](./AI%20Prompts%20For%20Marketing%20%26%20Communications)
+### [AI Prompts For Marketing & Communications](./AI%20Prompts%20for%20Marketing%20%26%20Communications)
 - Content creation and copywriting templates
 - Social media campaign development and optimization
 - Brand voice consistency guidelines
