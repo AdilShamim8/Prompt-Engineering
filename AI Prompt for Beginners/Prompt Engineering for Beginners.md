@@ -1923,6 +1923,112 @@ This final section collects the reference layers of the guide: the vocabulary, t
 
 **Zero-shot prompting** — Instructing the model with no examples, relying on instruction clarity alone. (Section 3.1)
 
+### 10.2 Templates and Checklists
+
+Copy these templates and replace the BRACKETED parts. They intentionally encode the habits taught throughout this guide.[^51]
+
+**Template 1: The Complete Prompt (General Purpose)**
+
+```
+ROLE: You are a [specific role] who [one line of relevant expertise].
+
+TASK: [Action verb] + [what to produce] + [for whom].
+
+CONTEXT: [2-4 sentences of the information that changes the answer:
+audience, purpose, situation, prior decisions.]
+
+INPUT DATA:
+"""
+[The material to work on, if any]
+"""
+
+RULES:
+1. [Most important requirement]
+2. [Second requirement]
+3. [Escape hatch: what to do if information is missing or the task cannot be done]
+
+OUTPUT FORMAT:
+[Structure skeleton: headings, table columns, JSON shape, word count]
+
+VERIFICATION NOTE: [Optional: "End by listing any claims you are least certain about."]
+```
+
+**Template 2: Concept Explainer**
+
+```
+Explain [CONCEPT] to a [AUDIENCE, e.g., "curious 12-year-old" / "senior manager
+with no technical background"].
+
+Structure:
+1. One-sentence definition a beginner can repeat.
+2. A concrete everyday analogy.
+3. How it works, in 3 steps.
+4. One common misconception, corrected.
+5. A 3-question self-check with answers hidden below.
+
+Length: under 300 words. No jargon without immediate explanation.
+```
+
+**Template 3: Document Summarizer with Guardrails**
+
+```
+Summarize the text between <doc> tags.
+
+Requirements:
+1. 5 bullet points, max 20 words each.
+2. Only information present in the text—no outside additions.
+3. Preserve numbers, names, and dates exactly.
+4. End with: "Best follow-up question: [one question the text answers
+   but a reader would want to go deeper on]"
+
+<doc>
+[PASTE TEXT]
+</doc>
+```
+
+**Template 4: Code Review Request**
+
+```
+Review the code between <code> tags. I did not write it and must decide
+whether to use it.
+
+Check, in order of importance:
+1. Correctness bugs (edge cases, off-by-one, error handling)
+2. Security issues (injection, unsafe handling, secrets)
+3. Readability problems that block maintenance
+
+Output: a numbered list of findings, each with severity (critical/major/minor),
+the line or function affected, and a one-line fix. Then one sentence on whether
+you would use this code as-is.
+
+<code>
+[PASTE CODE]
+</code>
+```
+
+**Checklist: Before Running an Important Prompt**
+
+```
+[ ] Task stated first, with an action verb
+[ ] Audience and purpose specified
+[ ] Output format given (or skeleton shown)
+[ ] Critical constraints numbered and repeated at the end
+[ ] Data delimited and separated from instructions
+[ ] Escape hatch for missing information
+[ ] Realistic test input prepared (not just the easy case)
+```
+
+**Checklist: Before Using an Important Output**
+
+```
+[ ] Facts, numbers, names, and citations verified externally
+[ ] Claims the model flagged as uncertain double-checked
+[ ] Output read end-to-end by a human
+[ ] Biases spot-checked (who is defaulted? swap-test passed?)
+[ ] No confidential data was sent that should not have been
+[ ] AI's role disclosed where the audience would expect it
+```
+
 <span style="display:none">[^18][^19][^20][^21][^22][^23][^24][^25][^26][^27][^28][^29][^30][^31][^32][^33][^34][^35][^36][^37][^38][^39][^40][^41][^42][^43][^44][^45][^46][^47][^48][^49][^50][^51][^52]</span>
 
 
