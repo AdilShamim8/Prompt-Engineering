@@ -2,6 +2,12 @@
 
 Retrieval-augmented generation: supplying the model with retrieved source material at prompt time so its answers are grounded in your documents rather than its training data. This guide covers the prompting layer of RAG — the architecture around it (embeddings, vector stores, chunking) is a systems topic, but the prompts are what determine whether retrieval actually helps.
 
+## Before You Start
+
+**Learning objectives** — after this guide you can: write a RAG prompt with the four load-bearing elements (scoping, citation, refusal hatch, conflict transparency); tune the six characteristic failure modes; prompt the query-formulation side; and combine grounding with structured outputs for routing.
+
+**Prerequisites** — [Prompt Chaining](./Prompt%20Chaining%20and%20Multi-Stage%20Workflows.md) and [Long-Context Management](./Long-Context%20and%20Context%20Management.md). Curriculum position: [§3.5](../CURRICULUM.md#tier-b--scale-to-complex-tasks). The system architecture around these prompts (retrieval, chunking, provenance) is the companion [Context-Engineering](https://github.com/AdilShamim8/Context-Engineering) repository's subject.
+
 ## Why RAG Changes the Prompting Problem
 
 Without retrieval, the model answers from training data: broad, stale, unverifiable. With retrieval, it answers from the passages you supply — current, scoped, citable. But retrieved context only helps if the prompt makes the model USE it correctly, and the characteristic RAG failure is a model that ignores, over-trusts, or hallucinates past its sources.
@@ -96,3 +102,12 @@ A test set of ~50 known-question/known-source/known-answer triples catches most 
 - RAG grounds the model in retrieved text; it does not make the retrieved text correct, current, or unbiased — source quality is still your problem
 - The refusal hatch means RAG systems answer "I don't know" more than raw models do — that is a feature, and stakeholders should be briefed to expect it
 - Prompt-level RAG patterns do not substitute for the system-level security layers described in the Injection Defense guide: retrieved documents are untrusted input, and RAG systems are a primary injection surface in production
+
+## Practice
+
+Gather 3–4 short source documents you know well (policies, FAQs — fictional stand-ins) and build the core RAG prompt by hand: label each passage with a source tag, add all four rules, and ask five questions — two the sources answer, one they half-answer, one they cannot answer, and one that requires synthesizing two passages. Verify every citation against the actual text. Then test the refusal hatch: does the half-answerable question get an honest partial answer, or a confident gap-fill? Skeleton: [RAG grounded answer template](../templates/advanced-prompt-templates.md#rag-grounded-answer).
+
+## Further Reading
+
+- [Lost in the Middle](https://arxiv.org/abs/2307.03172) — why passage ordering matters even in grounded answers
+- [Context-Engineering](https://github.com/AdilShamim8/Context-Engineering) — the corpus design, chunking, and provenance layers around these prompts
