@@ -999,6 +999,73 @@ Asking the model to gather requirements first is a simple, powerful pattern: it 
 
 **Pro Tip:** Keep a "style card" for recurring content: your audience, voice, banned phrases, and two sample paragraphs you like. Paste it at the top of content prompts for consistently on-brand output without repeating yourself.
 
+### 5.2 Data Analysis and Extraction
+
+You do not need to be a data scientist to use AI on everyday information tasks: summarizing feedback, extracting structure from messy text, and spotting patterns in tables you paste into the chat. The key practices are to provide the data explicitly, ask for specific fields, and require the model to separate observation from interpretation.[^30]
+
+**Technique 1: Extraction with a Fixed Schema**
+
+```
+"Extract every date, dollar amount, and deadline from the text below into a table
+with columns: Item, Date, Amount, Deadline. If a value is not present, write 'N/A'.
+Do not infer values that are not explicitly stated.
+
+Text:
+"""
+[Paste contract, email thread, or report]
+"""
+```
+
+The "do not infer" rule matters: without it, models tend to fill gaps with plausible-looking guesses.
+
+**Technique 2: Categorization at Scale**
+
+```
+"Classify each piece of customer feedback into exactly one category:
+Pricing, Usability, Performance, Missing Feature, or Other.
+
+Feedback:
+1. "[paste]"
+2. "[paste]"
+3. "[paste]"
+
+Output a table: #, Feedback (first 8 words), Category, One-line reason.
+If a comment could fit two categories, pick the primary one and note the secondary
+in the reason column."
+```
+
+For consistent classification across many items, few-shot examples (Section 3.2) of tricky borderline cases improve agreement noticeably.[^29]
+
+**Technique 3: Summarize, Then Interpret—Separately**
+
+```
+"Part 1 — Summary: In 5 bullets, state only what the reviews literally say.
+No adjectives of your own, no generalizations.
+
+Part 2 — Interpretation: Based only on Part 1, list the 3 most important
+improvements, ranked. Mark each as 'strongly supported' or 'your inference.'
+"""
+[Paste 20 customer reviews]
+"""
+```
+
+Asking the model to label its own inferences keeps the summary trustworthy while still giving you analysis.
+
+**Technique 4: Sanity-Check the Numbers**
+
+```
+"Here is a table of monthly revenue: [paste table].
+1. Recalculate the 'Total' row yourself and tell me if it matches.
+2. List any month-over-month change greater than 25%.
+3. State one caveat about conclusions this data is too small to support."
+```
+
+Language models can make arithmetic errors, so always ask them to recompute and flag anomalies rather than trusting embedded calculations. For anything mission-critical, verify in a spreadsheet.
+
+**Common Mistake:** Pasting a screenshot or a huge file and asking "what do you see?" Wide-open questions produce shallow answers. Name the fields, the categories, or the patterns you care about, and the quality of extraction improves immediately.
+
+**Pro Tip:** Work on a sample first. Paste 10 rows, get the extraction right, then apply the same prompt to the rest. Fixing a schema on 10 rows costs seconds; discovering a broken schema after 500 rows costs an hour.
+
 <span style="display:none">[^18][^19][^20][^21][^22][^23][^24][^25][^26][^27][^28][^29][^30][^31][^32][^33][^34][^35][^36][^37][^38][^39][^40][^41][^42][^43][^44][^45][^46][^47][^48][^49][^50][^51][^52]</span>
 
 
