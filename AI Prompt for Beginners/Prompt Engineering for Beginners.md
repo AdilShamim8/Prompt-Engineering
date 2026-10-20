@@ -1566,6 +1566,66 @@ Understand the limit honestly: prompts cannot make an AI system secure. Real pro
 
 ***
 
+## 8. Tools and Workflows
+
+Individual prompts improve with technique; entire prompt practices improve with infrastructure. This section covers how to organize prompts, test them systematically, and compare variants fairly.[^47]
+
+### 8.1 Prompt Management Systems
+
+A prompt management system is simply a structured way to store, version, and share prompts. For an individual, a well-organized notes file qualifies. For a team, dedicated tooling pays off once prompts become part of real workflows.[^47][^42]
+
+**Level 1: The Personal Library (Start Here)**
+
+A single document or notes page with one entry per prompt:
+
+```
+## [Prompt name] — [one-line purpose]
+Used for: [task/audience]
+Version: v3 (2026-09-14)
+Prompt:
+    [the full text, with placeholders in BRACKETS]
+Notes: keep the word-count rule last; models follow it more reliably.
+Known issue: fails on inputs shorter than 2 sentences.
+```
+
+This minimal format already captures the three things people forget: why the prompt exists, what changed, and where it breaks.
+
+**Level 2: Structured Naming and Folders**
+
+Once you pass roughly 20 prompts, retrieval becomes the bottleneck:
+
+- Name by task, not by technique: "extract-action-items-from-meetings", not "cool-chain-prompt"
+- Group by workflow: writing/, analysis/, code/, operations/
+- Mark status in the entry: draft / testing / adopted / retired
+- Keep a "graveyard" section for retired prompts with a note on why—this prevents re-testing known failures
+
+**Level 3: Templates with Placeholders**
+
+Convert your best prompts into fill-in templates with explicit variables:
+
+```
+TEMPLATE: weekly-status-summary
+Variables:
+  {TEAM}        — team name
+  {ACCOMPLISHED} — raw bullet list of what happened
+  {BLOCKERS}    — raw bullet list of issues
+Prompt:
+  You are writing a status update for {TEAM}.
+  Convert the raw notes below into: 3 wins, 2 risks, 1 ask.
+  Tone: factual, no cheerleading. Max 120 words.
+  Notes: {ACCOMPLISHED} | Blockers: {BLOCKERS}
+```
+
+Templates make prompts reusable by people who did not write them—yourself included, three months later.
+
+**Level 4: Team and Tooling Considerations**
+
+When prompts are shared across a team or embedded in products, look for tooling that supports: version history, role-based access, environment separation (dev/staging/prod), usage logging, and evaluation hooks. Development frameworks also offer programmatic prompt templates with variable substitution for application use.[^42][^45] The selection criteria are the same as any shared infrastructure: auditability, rollback, and clear ownership.
+
+**Common Mistake:** Copying prompts from shareable "awesome prompts" lists into your library without testing or annotation. An untested prompt is a rumor, not an asset. Adopt only what you have run on your own inputs, and record what happened.
+
+**Pro Tip:** Schedule a quarterly prompt review: re-test your adopted prompts, retire what you no longer use, and update entries whose outputs have drifted after model updates. Ten minutes of maintenance prevents the slow rot of a library that no one trusts.
+
 <span style="display:none">[^18][^19][^20][^21][^22][^23][^24][^25][^26][^27][^28][^29][^30][^31][^32][^33][^34][^35][^36][^37][^38][^39][^40][^41][^42][^43][^44][^45][^46][^47][^48][^49][^50][^51][^52]</span>
 
 
