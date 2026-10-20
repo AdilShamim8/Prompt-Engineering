@@ -1773,6 +1773,55 @@ Ask a model to answer a question about a short text you paste, where the answer 
 
 **What to notice:** without the escape hatch, fluent guessing looks exactly like knowing.
 
+### 9.2 Intermediate Challenges
+
+**Challenge 1: Build a Working Prompt Chain**
+
+Task: turn a messy set of hand-written meeting notes into a formatted action-item email.
+
+Rules: use at least three sequential prompts (extract → organize → draft), and let each output feed the next. Do not do any of the work yourself between steps.
+
+```
+Sample chain:
+Prompt 1: "Extract every task, owner, and deadline mentioned in these notes.
+          Output a table. Mark missing owners as 'unclear'."
+Prompt 2: "Here is the table: [paste]. Group items by owner, sort by deadline,
+          and flag anything due within 48 hours."
+Prompt 3: "Draft a 150-word email to the team from this organized list:
+          [paste]. Friendly but direct; bullets, not paragraphs."
+```
+
+**What to notice:** each step's output is dramatically better than what one mega-prompt produces, and you could redo any single step without starting over.
+
+**Challenge 2: The Unreliable Narrator Test**
+
+Ask a model to summarize a topic you know well (your hometown, your profession, a hobby). Fact-check every claim. List the errors confidently stated.
+
+**Goal:** calibrate your trust. Everyone should experience, at least once, an AI being fluently wrong about something they know deeply.
+
+**Challenge 3: Tame the Length**
+
+Find any 800-word AI-generated explanation and iteratively compress it: ask for 400 words, then 150, then a single sentence—each time preserving all key information. You will need to define "key" explicitly.
+
+```
+Hint prompt: "Cut this to 150 words while keeping: the definition, the two
+causes, the main risk, and the fix. Drop examples and history."
+```
+
+**Challenge 4: Debug a Failing Prompt**
+
+Take a prompt where the model ignores your format (e.g., you asked for JSON and got prose). Apply the Section 6.3 debugging procedure: strip, bisect, hypothesize, fix minimally, regression-test on three inputs.
+
+**Challenge 5: Role With Guardrails**
+
+Write a role-based prompt for a "patient math tutor for a struggling 12-year-old" with these constraints: never give the final answer directly, ask one guiding question at a time, and check understanding before advancing. Test it on three problems of increasing difficulty.
+
+**What to notice:** behavioral constraints (how to teach) are harder to enforce than content constraints (what to teach)—expect to iterate on the constraint wording.
+
+**Challenge 6: Build Your First Test Set**
+
+Pick a prompt you actually use. Collect 8 real inputs for it (2 typical, 2 edge, 1 adversarial, 3 others). Score current outputs 1–5 on correctness, completeness, and format. You now have a baseline—improve the prompt until the average is 4+.
+
 <span style="display:none">[^18][^19][^20][^21][^22][^23][^24][^25][^26][^27][^28][^29][^30][^31][^32][^33][^34][^35][^36][^37][^38][^39][^40][^41][^42][^43][^44][^45][^46][^47][^48][^49][^50][^51][^52]</span>
 
 
