@@ -2,6 +2,8 @@
 
 This comprehensive playbook is designed as a progressive, end-to-end resource—like a “Prompt Engineering Book”— tailored for data scientists and ML engineers. It is structured in chapters and levels (Beginner → Intermediate → Advanced → Expert) and delivers a practical blend of ready-to-use prompts, pedagogical rationale, real-world scenarios, and expert variations, so you can copy, learn, and adapt each prompt for your actual work.
 
+> **Companion guides in this directory:** [Data Leakage Prevention & Validation](./Data%20Leakage%20Prevention%20%26%20Validation%20Prompts.md) · [Model Evaluation & Interpretation](./Model%20Evaluation%20%26%20Interpretation%20Prompts.md) · [Experiment Design & Reproducibility](./Experiment%20Design%20%26%20Reproducibility%20Prompts.md) · [Statistical Rigor & Uncertainty](./Statistical%20Rigor%20%26%20Uncertainty%20Prompts.md) · [Data Visualization](./Data%20Visualization%20Prompts.md) · [SQL & Data Engineering](./SQL%20%26%20Data%20Engineering%20Prompts.md) · [Code Review & Validation](./Code%20Review%20%26%20Validation%20Prompts.md)
+
 ***
 
 ## Table of Contents
