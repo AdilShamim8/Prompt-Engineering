@@ -1205,6 +1205,72 @@ Structured estimation turns vague gut feelings into checkable assumptions. When 
 
 ***
 
+## 6. Common Pitfalls and Best Practices
+
+Even people who know the techniques make predictable mistakes under time pressure. This section catalogs the most frequent errors, the habits that prevent them, and a systematic way to troubleshoot a prompt that refuses to cooperate.[^44][^50]
+
+### 6.1 Typical Mistakes to Avoid
+
+**Mistake 1: The Vague Mega-Prompt**
+
+"We need a strategy, some content ideas, a timeline, and maybe a budget—can you do all of that?"
+
+Why it fails: four tasks in one prompt means each gets shallow treatment, and the model must guess the priority. Fix: split into a prompt chain, one deliverable per step (Section 4.4), or explicitly prioritize: "Do task 1 fully; then outline task 2."
+
+**Mistake 2: Assuming the Model Knows Your World**
+
+"Why did our Q3 numbers drop?" asked with no data attached.
+
+Why it fails: the model has no access to your company's internals and will either refuse or—worse—generate a generic, confident-sounding explanation of nothing. Fix: paste the actual numbers, state the period, and define the metrics.
+
+**Mistake 3: Trusting Fluent Output**
+
+The response reads beautifully, so the facts must be right.
+
+Why it fails: fluency and accuracy are independent. Models can state wrong numbers, invented citations, and outdated features in perfect prose. Fix: verify every fact, figure, name, quote, and claim against a real source before use (see Section 7).
+
+**Mistake 4: One-Shotting a Complex Task**
+
+Asking for a complete 20-page document, a full application, or an entire analysis in a single prompt.
+
+Why it fails: long outputs drift, lose the format, and bury the good parts. Fix: iterate in stages—outline, section by section, then refine (Section 5.1 demonstrates the pattern).
+
+**Mistake 5: Polite Filler and Hedged Instructions**
+
+"I was wondering if maybe you could possibly summarize this a little bit?"
+
+Why it fails: hedged language produces hedged output. Fix: direct imperatives—"Summarize in 3 bullets"—are not rude; they are clear.
+
+**Mistake 6: Ignoring the Context Window**
+
+Pasting 80 pages and asking about a detail on page 79.
+
+Why it fails: information in the middle of very long inputs gets less attention; costs grow; and some tools silently truncate. Fix: extract the relevant section first, or ask a targeted extraction question before your real question.
+
+**Mistake 7: Fighting the Model's Defaults**
+
+Asking for a style the tool is actively set up against (for example, demanding step-by-step math while a "concise answers only" mode is enabled).
+
+Why it fails: system-level settings and modes often outweigh your prompt. Fix: check the tool's current mode (reasoning, code, custom instructions) and align it with your task before blaming the prompt.
+
+**Mistake 8: Never Writing Prompts Down**
+
+Recreating the same prompt from memory every week, inconsistently.
+
+Why it fails: you lose your improvements and cannot share what works. Fix: keep a prompt library (Section 4.4) — a simple text file or notes app entry is enough to start.
+
+**The Five-Minute Pre-Flight Check:**
+
+Before running an important prompt, confirm:[^44]
+
+1. Is the task stated with an action verb, first?
+2. Does the model have (or point to) everything it needs?
+3. Is the output format specified?
+4. Are the critical constraints numbered?
+5. Do I have a way to verify the output?
+
+If any answer is "no," fix that one thing before running. In practice this check eliminates the majority of weak-prompt problems before they occur.
+
 <span style="display:none">[^18][^19][^20][^21][^22][^23][^24][^25][^26][^27][^28][^29][^30][^31][^32][^33][^34][^35][^36][^37][^38][^39][^40][^41][^42][^43][^44][^45][^46][^47][^48][^49][^50][^51][^52]</span>
 
 
