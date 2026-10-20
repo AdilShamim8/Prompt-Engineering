@@ -2,6 +2,12 @@
 
 The evaluation discipline for prompts used seriously — in production systems, repeated workflows, or anything where quality matters more than novelty. The Beginners guide covers personal-scale testing (its Section 8); this guide covers the systematic version: test design, automated evaluation, regression pipelines, and the honest limits of each.
 
+## Before You Start
+
+**Learning objectives** — after this guide you can: place yourself on the five-level evaluation stack honestly; build a tiered test set with pass/fail, rubric, and judge layers; score with the benchmark trap in mind; and wire evaluation into prompt changes as a regression gate.
+
+**Prerequisites** — [Structured Outputs](./Structured%20Outputs%20and%20Schema%20Prompting.md) (Tier 1 checks are schema validation) and Beginners guide §8. Curriculum position: [§3.10](../CURRICULUM.md#tier-d--trust-and-reliability); this discipline is what [Versioning](./Prompt%20Versioning%20and%20Maintenance.md) depends on.
+
 ## The Evaluation Stack
 
 ```
@@ -107,3 +113,12 @@ Test sets sample reality; production tells you what actually arrives:
 - **Judges are models too**: every judge limitation above applies, and a judge that agrees with humans today can drift with the next model version — recalibrate on updates
 - **The benchmark trap**: optimizing scores past the point of user-noticeable improvement is wasted effort and, worse, invites overfitting the test set; hold out a final set you never optimize against, and refresh test sets when scores saturate
 - **No automated check verifies truth**: Tier 3's hallucination check and human verification remain the only truth layers; everything else validates form
+
+## Practice
+
+[Lab 3](../labs/lab-03-evaluation-and-regression-testing.md) is this guide's full guided exercise: a 10-case golden set across four case categories, a four-criterion rubric, one deliberate prompt change, and a before/after regression decision. If you want the one-session version: take any prompt you use weekly, save 10 real inputs (fictionalized), define two pass/fail checks and two rubric criteria, score the current prompt, make one improvement, and re-score. The [evaluation rubric template](../templates/advanced-prompt-templates.md#evaluation-rubric) is the scoring skeleton.
+
+## Further Reading
+
+- [Sahoo et al. — A Systematic Survey of Prompt Engineering](https://arxiv.org/abs/2402.07927) — the evaluation landscape section situates these practices
+- Your provider's current evaluation-tooling documentation (evals harnesses, judge modes) — provider-specific and changing (reviewed 2026-10-20)
