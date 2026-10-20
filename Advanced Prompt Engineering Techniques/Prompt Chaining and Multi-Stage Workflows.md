@@ -2,6 +2,12 @@
 
 Decomposing complex tasks into sequences of smaller prompts, where each output feeds the next. Chaining is the single most reliable upgrade from "impressive demos" to "dependable results" — it trades one magical prompt for several controllable ones.
 
+## Before You Start
+
+**Learning objectives** — after this guide you can: decide when a task deserves a chain and when one prompt is better; apply the four canonical patterns (extract-transform-draft, draft-critique-revise, map-reduce, gate-branch); design stages with inspectable, minimal handoffs; and name each stage's failure mode before running it.
+
+**Prerequisites** — [Structured Outputs](./Structured%20Outputs%20and%20Schema%20Prompting.md) (chains run on structured intermediate outputs). Curriculum position: [§3.3](../CURRICULUM.md#tier-b--scale-to-complex-tasks); this guide unlocks [RAG prompting](./RAG%20Prompting.md) and [agent-oriented prompting](./Agent-Oriented%20Prompting.md).
+
 ## Why Chain Instead of One Big Prompt
 
 - **Reviewability**: you can inspect and correct each stage before it contaminates the next
@@ -81,3 +87,12 @@ Chains add latency and failure surface. For simple tasks, one well-specified pro
 ## From Manual to Automated Chains
 
 Manually copying outputs between prompts is how everyone starts — and it stays fine for irregular work. When a chain becomes routine (daily runs, volume processing), move to programmatic orchestration: API calls with the prompt templates as code, automatic passing of outputs, validation between stages, and logging of every intermediate result. The major LLM application frameworks (LangChain, LlamaIndex, and similar) exist for exactly this — evaluate them when manual copying becomes your bottleneck, not before.
+
+## Practice
+
+Take a real document task (research digest, project update, incident summary — fictional stand-ins) and build the extract → transform → draft chain manually: run stage 1, inspect its table, fix it if wrong *before* continuing — record what you caught. Then sabotage the experiment: deliberately pass an uncorrected stage-1 error forward and observe how it surfaces (or doesn't) in the final output. That asymmetry is the whole argument for inspectable handoffs. Skeleton: [two-stage chain template](../templates/advanced-prompt-templates.md#two-stage-prompt-chain).
+
+## Further Reading
+
+- [ReAct: Synergizing Reasoning and Acting in Language Models](https://arxiv.org/abs/2210.03629) — the research root of interleaved multi-step prompting
+- [Anthropic — prompt chaining guidance](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview) — provider-specific chaining notes (reviewed 2026-10-20)
