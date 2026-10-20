@@ -2060,6 +2060,38 @@ The following resources, already cited throughout this guide, are the ones most 
 - Keep promptingguide.ai bookmarked as a lookup reference, not a cover-to-cover read.
 - Whenever a source disagrees with your experience, trust your test results—providers describe general tendencies, not laws.
 
+### 10.4 Bibliography
+
+This guide cites 52 sources, listed as numbered footnotes throughout the text and collected at the end of this document. They fall into the following groups:
+
+**Official Provider and Platform Documentation (footnotes 2, 4, 6, 7, 39, 51)**
+Primary guidance from OpenAI, Anthropic, AWS, and Google Cloud. Where this guide makes claims about how models behave or what providers recommend, these are the preferred sources, and they take precedence over third-party summaries when the two disagree.
+
+**Peer-Reviewed and Academic Sources (footnotes 25, 26)**
+Conference and journal literature on prompting methods and their evaluation, used to anchor the more research-oriented claims rather than blog-level opinion.
+
+**Structured Learning Resources (footnotes 10, 11, 14, 24, 28)**
+Canonical technique catalogs and courses, including promptingguide.ai and learnprompting.org, which document zero-shot, few-shot, chain-of-thought, and related patterns.
+
+**Evaluation, Testing, and Reliability (footnotes 31, 33, 36, 38, 40, 41, 43, 49)**
+Sources on metrics, rubrics, LLM-as-judge practice, and A/B testing methodology that informed Sections 8.2 and 8.3.
+
+**Ethics, Bias, and Responsible Use (footnotes 8, 32, 35)**
+Materials on responsible prompting, bias mitigation, and inclusive practice underpinning Section 7.
+
+**Applied Guides and Community Practice (footnotes 1, 3, 5, 9, 12, 13, 15–23, 27, 29, 30, 34, 37, 42, 44–48, 50, 52)**
+Practitioner articles, platform guides, and community discussions that supplied examples, workflows, and the "common mistakes" corpus. These sources are directional; the guide treats their claims as practice wisdom, not as verified research findings.
+
+**A Note on Source Use**
+
+Where sources conflicted, the guide followed this precedence: official documentation > peer-reviewed research > reputable technical publications > community practice. Statistics appearing in single practitioner sources were deliberately not repeated as facts in the body text. Readers should verify any claim that materially affects their work against the original source—especially anything dependent on a specific model version, since capabilities and defaults change.
+
+***
+
+## Closing Note
+
+You now have the complete foundation: what prompts are made of (Section 2), the core techniques (Section 3), the advanced skills (Section 4), worked applications (Section 5), the failure catalogue and its cures (Section 6), the responsibilities (Section 7), the infrastructure of a serious practice (Section 8), and the exercises that turn knowledge into skill (Section 9). The single most predictive habit of people who get consistently good results from AI is modest: they iterate, one change at a time, and they write down what worked. Start with Exercise 1 today.
+
 <span style="display:none">[^18][^19][^20][^21][^22][^23][^24][^25][^26][^27][^28][^29][^30][^31][^32][^33][^34][^35][^36][^37][^38][^39][^40][^41][^42][^43][^44][^45][^46][^47][^48][^49][^50][^51][^52]</span>
 
 
