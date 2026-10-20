@@ -2,6 +2,12 @@
 
 Working with large inputs — long documents, many documents, extended conversations — inside models whose context windows are large but not unlimited, and whose attention to long inputs is imperfect. Context length is a budget; this guide is about spending it well.
 
+## Before You Start
+
+**Learning objectives** — after this guide you can: treat context as a budget with positional effects, not just a capacity; apply extraction-first compression, map-reduce, and structured anchoring; manage conversation context creep; and run the context budgeting checklist on any prompt.
+
+**Prerequisites** — [Beginners guide](../AI%20Prompt%20for%20Beginners/Prompt%20Engineering%20for%20Beginners.md) §2–4 (context and constraints). Curriculum position: [§3.4](../CURRICULUM.md#tier-b--scale-to-complex-tasks); feeds directly into [RAG prompting](./RAG%20Prompting.md).
+
 ## The Mental Model
 
 A context window is not RAM: putting something inside it does not guarantee reliable use. Attention is uneven — content in the middle of very long inputs gets less effective attention than content at the beginning and end (the "lost in the middle" pattern from long-context research). Practical consequences:
@@ -89,3 +95,12 @@ The countermeasure is deliberate context hygiene:
 - **Context ≠ comprehension at full strength**: models handle long inputs imperfectly; critical details deserve structural emphasis (labels, repetition at start and end), not just inclusion somewhere
 - **Provider limits differ and change**: verify current window sizes and pricing in your provider's documentation, and re-test long-context prompts when switching models
 - **Retrieval is often the better architecture**: for recurring access to a large corpus, RAG (next guide) beats re-sending everything — the question is corpus size × query frequency, not raw capability
+
+## Practice
+
+Take one long document you actually work with (report, contract, spec — a fictional stand-in is fine) and ask a specific question of it two ways: (a) whole document plus question, (b) extraction-first then answer-from-extract. For (b), verify the answer against the quoted passages. Then plant a canary: add one unusual, question-relevant sentence in the middle of the document and re-run both — record which method catches it. Skeletons for both patterns are in this guide; the system-level view of context budgeting is the companion [Context-Engineering](https://github.com/AdilShamim8/Context-Engineering) repository.
+
+## Further Reading
+
+- [Lost in the Middle: How Language Models Use Long Contexts](https://arxiv.org/abs/2307.03172) — the position-effect evidence behind this guide's mental model
+- Your provider's current documentation on context window sizes and pricing — these change; verify before budgeting
