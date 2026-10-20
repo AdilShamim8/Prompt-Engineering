@@ -1721,6 +1721,58 @@ You do not need tooling to start. In one session: run variant A on all 10 saved 
 
 ***
 
+## 9. Practice Exercises
+
+Reading about prompting builds familiarity; practicing builds skill. The exercises below are designed to be done in any AI chat tool, in order, with roughly increasing difficulty. Work each exercise yourself before reading the sample solution—the struggle is the point.
+
+### 9.1 Beginner Exercises
+
+**Exercise 1: Vague to Specific**
+
+Take the prompt "Tell me about coffee" and rewrite it three times so that each version specifies: (a) an audience, (b) an output format, and (c) a scope limitation. Run all four and compare.
+
+```
+Sample solution:
+"Explain how caffeine affects sleep to someone who drinks 3 cups a day and
+struggles to fall asleep. Use 5 bullet points, under 20 words each. Cover only
+timing, tolerance, and withdrawal—skip general coffee history."
+```
+
+**What to notice:** how much of the "intelligence" of the output was hiding in your specificity, not the model.
+
+**Exercise 2: The Missing Context Diagnosis**
+
+Run this deliberately broken prompt: "Write an email to my team about the change." Then answer: what three pieces of context would most improve the result? Add them and re-run.
+
+```
+Sample fix: specify (1) what changed, (2) how it affects the team,
+(3) what you want them to do—and a tone (e.g., calm, not alarmist).
+```
+
+**Exercise 3: Format Control**
+
+Ask for "information about the water cycle" three times, requesting: (a) a numbered list, (b) a two-column table (Stage | What happens), (c) a 50-word paragraph for a 9-year-old. Same content, three shapes.
+
+**What to notice:** format changes what gets included, not just how it looks.
+
+**Exercise 4: First Few-Shot Prompt**
+
+Build a few-shot classifier. Provide two examples of movie reviews classified as Positive/Negative/Mixed, then have it classify a third, unclassified review. Use the format:
+
+```
+Review: "Stunning visuals, but the plot collapsed halfway through."
+Classification: Mixed
+
+Review: "I smiled the whole way through."
+Classification: [your model completes this]
+```
+
+**Exercise 5: The Escape Hatch**
+
+Ask a model to answer a question about a short text you paste, where the answer is NOT in the text—but do not warn it. Observe whether it guesses. Then re-run with: "If the text does not contain the answer, reply exactly: 'Not in text.'"
+
+**What to notice:** without the escape hatch, fluent guessing looks exactly like knowing.
+
 <span style="display:none">[^18][^19][^20][^21][^22][^23][^24][^25][^26][^27][^28][^29][^30][^31][^32][^33][^34][^35][^36][^37][^38][^39][^40][^41][^42][^43][^44][^45][^46][^47][^48][^49][^50][^51][^52]</span>
 
 
