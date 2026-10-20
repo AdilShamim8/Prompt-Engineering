@@ -2,6 +2,12 @@
 
 Getting AI outputs that machines can parse reliably — JSON, tables, and schema-constrained responses. This is the bridge between "chatting with an AI" and "building software on top of an AI."
 
+## Before You Start
+
+**Learning objectives** — after this guide you can: write a schema prompt with explicit edge rules; decide between prompt-level and API-level structuring; validate outputs programmatically and run a self-correction retry; and state exactly what schema constraints do not guarantee.
+
+**Prerequisites** — the [Beginners guide](../AI%20Prompt%20for%20Beginners/Prompt%20Engineering%20for%20Beginners.md) fundamentals (§1–4), especially output formatting. Curriculum position: [§3.1](../CURRICULUM.md#tier-a--make-outputs-usable), the first advanced guide.
+
 ## When You Need This
 
 - Output feeds a script, spreadsheet, API, or database
@@ -84,3 +90,12 @@ For complex structures, shrink the blast radius: **one entity type per call**, c
 - Structured outputs constrain **format, not truth** — a perfectly valid JSON can contain perfectly fabricated values. Validation checks shape; verification of content is still your job.
 - Schema adherence degrades as instructions multiply — keep the rule list short and the schema as simple as the use case allows.
 - Model behavior differs across providers and versions; re-test schema prompts when you switch models (see the Evaluation guide).
+
+## Practice
+
+Take ten real-world items from your own field (tickets, messages, records — use fictional stand-ins) and build an extraction schema with: typed fields, one closed-set enum, an explicit missing-data rule, and an isolation instruction. Run it, validate every output against your schema, and log each failure with its cause. Then deliberately feed one malformed input and fix what breaks. The guided version of this exercise is [Lab 2](../labs/lab-02-few-shot-and-structured-outputs.md); the copy-paste skeleton is the [structured output template](../templates/advanced-prompt-templates.md#structured-output-extraction).
+
+## Further Reading
+
+- [OpenAI — Introducing structured outputs in the API](https://openai.com/index/introducing-structured-outputs-in-the-api/) — what decoding-level enforcement guarantees (reviewed 2026-10-20; verify against current docs)
+- Your provider's current structured-output documentation — capabilities and constraints vary and change
