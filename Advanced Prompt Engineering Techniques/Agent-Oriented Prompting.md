@@ -2,6 +2,12 @@
 
 Patterns for systems where a model plans, acts via tools, observes results, and iterates — and for multi-agent designs where specialized prompts collaborate. Agents are the most powerful and most dangerous prompt architecture: everything that makes them useful (autonomy, iteration) makes their failures compounding. This guide covers the prompting patterns and the guardrails.
 
+## Before You Start
+
+**Learning objectives** — after this guide you can: write an agent prompt with verifiable completion criteria, stop conditions, and failure honesty; apply the three multi-agent patterns and refuse multi-agent when it is not needed; and design the confirmation gates and code-level guardrails that bound autonomy.
+
+**Prerequisites** — [Prompt Chaining](./Prompt%20Chaining%20and%20Multi-Stage%20Workflows.md) and [Tool Use and Function Calling](./Tool%20Use%20and%20Function%20Calling.md). Curriculum position: [§3.7](../CURRICULUM.md#tier-c--extend-beyond-plain-textin-text-out). Read [Injection Defense](./Prompt%20Injection%20Defense.md) before running any agent over untrusted content.
+
 ## What Makes a Prompt "Agentic"
 
 A standard prompt says: "do this task." An agent prompt says: "pursue this goal using these tools, in this loop, under these rules, until this stop condition." The prompt defines a process, not just a task:
@@ -109,3 +115,12 @@ Moving up this ladder is a decision about blast radius, not a milestone to rush 
 - Agent systems are the least deterministic prompt artifact: identical runs diverge, and "it worked in the demo" is the weakest evidence class — production agents need the full evaluation discipline (see the Evaluation guide) plus monitoring
 - Self-correction has a ceiling: agents asked to check their own work inherit their own blind spots; the maker-checker separation exists precisely because self-review underperforms
 - Current models' long-horizon planning degrades with task length — decompose into stages with checkpoints rather than hoping for one heroic run
+
+## Practice
+
+Design (on paper, no code needed) an agent for a task you know: a literature scan, an inbox triage, a data-cleaning pass. Write the full agent prompt — goal with verifiable completion criteria, the working loop, all four stop conditions, and the failure-honesty rules. Then red-team your own design: write three scenarios that would make your agent loop, drift, or fabricate success, and add the specific countermeasure for each. Finally, classify every action it could take on the risk ladder (drafts-only → low-risk-auto → audited) and justify each placement.
+
+## Further Reading
+
+- [ReAct](https://arxiv.org/abs/2210.03629) — the reasoning-acting loop pattern this guide's working loop descends from
+- [OWASP Top 10 for LLM Applications](https://genai.owasp.org/) — the risk taxonomy for agentic systems (reviewed 2026-10-20)
