@@ -75,6 +75,16 @@ This repository is organized into the following main sections to serve different
 - Customer persona development and targeting
 - Marketing analytics interpretation and strategic planning
 - PR crisis management and response frameworks
+- Claims verification and responsible marketing practices
+
+### [Advanced Prompt Engineering Techniques](./Advanced%20Prompt%20Engineering%20Techniques)
+- Structured outputs and schema-constrained responses
+- Prompt chaining and multi-stage workflows
+- Few-shot mastery, meta-prompting, and prompt optimization
+- Multimodal, long-context, and RAG prompting
+- Tool use, function calling, and agent-oriented patterns
+- Prompt evaluation, testing, and versioning discipline
+- Prompt injection defense and hallucination reduction
 
 ## Why Prompt Engineering Matters
 
