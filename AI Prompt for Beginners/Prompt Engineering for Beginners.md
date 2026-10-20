@@ -1458,6 +1458,60 @@ Before sending, publishing, or submitting AI-assisted work:
 
 **Pro Tip:** Build verification into the workflow, not after it. When you ask for content that contains checkable claims, ask in the same prompt for a list of the claims that most need verification. You get a ready-made review checklist alongside the draft.
 
+### 7.2 Bias Mitigation
+
+Language models learn from human-generated text, and human text contains stereotypes, imbalances, and historical prejudices. Models therefore reproduce—and can amplify—biased patterns unless you actively counteract them. Bias mitigation is not a one-time fix; it is a habit of noticing who is represented, described, and defaulted in outputs.[^32][^8]
+
+**Where Bias Shows Up in Outputs:**
+
+- **Occupational defaults**: nurse is "she," engineer is "he"
+- **Name-based assumptions**: characters named in examples are given stereotyped traits
+- **Cultural defaults**: "a normal dinner," "standard business attire," "classic literature" all encode a specific culture as the default
+- **Language framing**: describing one group with agentive words ("leaders") and another with passive words ("recipients of aid")
+- **Uneven criticism**: harsher scrutiny of some groups' behavior than the same behavior from others
+
+**Mitigation Techniques:**
+
+**1. Specify Representation Explicitly**
+
+```
+Instead of: "Write a story about a team of engineers."
+Use: "Write a story about a team of six engineers. Vary their genders, ages, and
+backgrounds naturally. Do not assign roles by stereotype (e.g., avoid making the
+only woman the note-taker)."
+```
+
+**2. Ask for a Bias Review of Your Own Text**
+
+```
+"Review this job posting for biased or exclusionary language. Check for:
+1. Gender-coded words (e.g., 'rockstar', 'ninja', 'aggressive')
+2. Age-coded phrases (e.g., 'digital native', 'recent graduate' when not required)
+3. Unnecessary requirements that exclude capable candidates
+4. Cultural assumptions (food, holidays, family structures)
+For each finding: quote the phrase, explain the issue, suggest neutral wording."
+```
+
+**3. Request Balanced Perspectives**
+
+```
+"Summarize the arguments on this policy question. Present the 3 strongest arguments
+for each side with equal depth and neutral language. Do not indicate which side
+you find stronger."
+```
+
+**4. Counteract Default Settings in Generated Worlds**
+
+When asking for scenarios, personas, or examples, add: "Include diverse names, abilities, and family structures unless the task specifically requires otherwise."
+
+**Important Limits of Prompt-Level Mitigation:**
+
+Prompting reduces visible bias in individual outputs, but it cannot remove bias from the underlying model, and it cannot guarantee fairness in high-stakes applications. For decisions about people—hiring, lending, grading, healthcare—prompt-level bias checks are a supplement to, never a substitute for, proper evaluation, structured criteria, and human review by people alert to these issues. Treat "the prompt says to be unbiased" as a guardrail, not a guarantee.
+
+**Common Mistake:** Assuming unbiased intent produces unbiased output. Even with neutral instructions, models drift toward statistical patterns from training data. The fix is inspection: read outputs specifically asking "who is defaulted, who is described how, and would this read differently if the group were swapped?"
+
+**Pro Tip:** Swap-test your outputs: mentally reverse the gender, age, or group of each person mentioned and re-read. If the text suddenly feels odd or stereotyped, you have found a bias worth fixing—before your readers do.
+
 <span style="display:none">[^18][^19][^20][^21][^22][^23][^24][^25][^26][^27][^28][^29][^30][^31][^32][^33][^34][^35][^36][^37][^38][^39][^40][^41][^42][^43][^44][^45][^46][^47][^48][^49][^50][^51][^52]</span>
 
 
