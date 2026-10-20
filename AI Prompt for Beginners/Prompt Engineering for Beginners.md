@@ -1412,6 +1412,52 @@ Sometimes the real issue is not wording at all. Consider these before more promp
 
 ***
 
+## 7. Ethical Considerations
+
+Prompt engineering is not just a technical skill—it carries real responsibilities. This section covers the three areas every user should understand: using AI responsibly, avoiding the amplification of bias, and protecting privacy and security.[^35]
+
+### 7.1 Responsible AI Usage
+
+Responsible use starts with a clear picture of what these systems are: probability-based text generators that produce plausible content, not verified truth. Every practice in this section flows from that single fact.
+
+**Core Habits of Responsible Use:**
+
+**1. Verify Before You Amplify**
+
+Treat every factual claim in AI output as unverified until you check it. This applies doubly to statistics, quotations, legal points, medical information, and citations—which are the areas where models most confidently fabricate. A fabricated citation with your name on it is your error, not the model's.
+
+**2. Disclose Meaningful AI Involvement**
+
+Norms vary by context, but the principle is consistency with your audience's expectations: academic work almost always requires disclosure; professional deliverables increasingly expect it; casual personal use rarely does. When in doubt, a single line—"drafted with AI assistance and reviewed by me"—costs nothing and builds trust.
+
+**3. Keep Humans in Charge of Consequential Decisions**
+
+AI can structure options, surface considerations, and draft communications. It should not be the decider on hiring, grading, medical, legal, or safety matters. If a decision affects someone's life, livelihood, or rights, a qualified person must make and own it.
+
+**4. Respect Intellectual Property**
+
+Models reproduce patterns from training data. Outputs can resemble existing works, and copyright law around generated content remains unsettled across jurisdictions. Practical habits: do not ask a model to reproduce an author's distinctive style for commercial work, do not paste large copyrighted texts you have no rights to, and check your organization's policy before using client or proprietary material.
+
+**5. Know the Model's Limits—and Say So**
+
+If you rely on AI for work product, be honest about its role and its failure modes to the people who depend on that work. "The AI said so" is never a defense; "I generated a draft with AI, then verified the following points" is a workflow.
+
+**A Responsible-Use Checklist:**
+
+```
+Before sending, publishing, or submitting AI-assisted work:
+[ ] Every factual claim checked against a real source
+[ ] Citations and quotes verified to exist and match the source
+[ ] Numbers recomputed independently
+[ ] Personal/confidential data was not shared with the tool inappropriately
+[ ] AI's role disclosed where the audience would expect it
+[ ] A human reviewed the final version end-to-end
+```
+
+**Common Mistake:** Treating responsible use as a compliance chore that slows you down. In practice, verification is faster than retraction. The five minutes you spend checking a draft is trivial compared to the cost of publishing a fabricated statistic or an invented reference.
+
+**Pro Tip:** Build verification into the workflow, not after it. When you ask for content that contains checkable claims, ask in the same prompt for a list of the claims that most need verification. You get a ready-made review checklist alongside the draft.
+
 <span style="display:none">[^18][^19][^20][^21][^22][^23][^24][^25][^26][^27][^28][^29][^30][^31][^32][^33][^34][^35][^36][^37][^38][^39][^40][^41][^42][^43][^44][^45][^46][^47][^48][^49][^50][^51][^52]</span>
 
 
