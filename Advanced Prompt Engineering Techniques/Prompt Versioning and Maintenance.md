@@ -2,6 +2,12 @@
 
 Managing prompts as maintained production assets rather than copied-and-pasted folklore. A prompt that runs a real workflow is software: it has behavior, dependencies, failure modes, and a lifecycle. This guide covers the practices that keep prompt libraries trustworthy over months and across team members.
 
+## Before You Start
+
+**Learning objectives** — after this guide you can: keep a minimum viable prompt record (version, owner, dependencies, test set); apply the retirement discipline that kills zombie prompts; wire prompt changes into review and regression gates; and budget the real maintenance cost.
+
+**Prerequisites** — [Prompt Evaluation and Testing](./Prompt%20Evaluation%20and%20Testing.md) (versioning without a test set is bookkeeping without feedback). Curriculum position: [§3.13](../CURRICULUM.md#tier-e--operate-and-maintain) — the final advanced guide, where the curriculum's techniques become an operated library.
+
 ## The Minimum Viable Prompt Record
 
 Every prompt worth keeping gets a record:
@@ -82,3 +88,12 @@ This is ordinary engineering discipline applied to a new artifact type — the t
 ## The Maintenance Budget
 
 The honest accounting: production prompts cost ongoing attention. A useful planning ratio — for every hour spent writing a prompt, expect 15-30 minutes per quarter maintaining it (test refresh, drift checks, incident response), more for prompts on fast-changing inputs. Budgeting zero maintenance means budgeting eventual silent failure; the prompt keeps responding while its quality quietly erodes, and nothing announces the rot until the audit, the incident, or the embarrassing screenshot.
+
+## Practice
+
+Create the minimum viable record for three prompts you actually use: name, version and date, owner, purpose, model it was tested against, dependencies, and — the load-bearing field — its test set (five saved inputs with expected key facts, per [Lab 3](../labs/lab-03-evaluation-and-regression-testing.md)). Store them as Markdown files in one folder: that is a versioned prompt library in miniature, diffable in any version control system. Then set the review cadence: a recurring calendar reminder to re-run each test set. The habit, not the tooling, is the deliverable.
+
+## Further Reading
+
+- [White et al. — A Prompt Pattern Catalog](https://arxiv.org/abs/2302.11382) — pattern names give a shared vocabulary for library documentation
+- This repository's [templates/](../templates/) — skeletons to seed your own library records
