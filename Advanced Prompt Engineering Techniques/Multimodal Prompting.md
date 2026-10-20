@@ -2,6 +2,12 @@
 
 Working with models that accept images (and in some cases audio, video, and documents) alongside text. Multimodal capability changes what you can ask for — and introduces failure modes that pure-text prompting never had. This guide covers the patterns and the pitfalls.
 
+## Before You Start
+
+**Learning objectives** — after this guide you can: calibrate expectations to what multimodal models do well and badly; apply the four core patterns (grounded description, multi-image comparison, extraction with an uncertainty hatch, chart-reading with read-vs-infer flags); and treat image-borne text as untrusted input.
+
+**Prerequisites** — [Beginners guide](../AI%20Prompt%20for%20Beginners/Prompt%20Engineering%20for%20Beginners.md) fundamentals; the untrusted-input sections of [Injection Defense](./Prompt%20Injection%20Defense.md) make the security angle land harder. Curriculum position: [§3.8](../CURRICULUM.md#tier-c--extend-beyond-plain-textin-text-out).
+
 ## What Multimodal Models Can Actually Do
 
 Well (as a class — verify for your specific model):
@@ -98,3 +104,12 @@ Photographs of whiteboards, screens, desks, and documents contain exactly the co
 ## Medical, Legal, Safety-Critical Images
 
 Multimodal models can describe medical images impressively — and are not diagnostic tools. The same boundary as text applies with more force: never route decisions with health, legal, or safety consequences through model interpretation of images. Models can support professionals' workflows; they do not replace the professional's judgment, and in regulated domains they are often not cleared for the use at all.
+
+## Practice
+
+Take a screenshot of a UI or a photo of a chart you can verify against ground truth, and run the grounded-description pattern: description first, question second — then check the description before trusting the answer. Next, run the extraction pattern with the [UNCLEAR] hatch on an image with deliberately small or blurry text, and record every guess the hatch prevented. Finally, feed a chart with values between gridlines and require read-vs-inferred flags; count how many "readings" turn out to be inferences. Ten minutes with known ground truth recalibrates multimodal trust better than any guideline.
+
+## Further Reading
+
+- [Google — prompting with media files](https://ai.google.dev/gemini-api/docs/prompting-strategies) — provider guidance on media prompting (reviewed 2026-10-20; capabilities are provider-specific and changing)
+- Your provider's current documentation on accepted media types, sizes, and video sampling behavior — verify before relying on any specific capability
