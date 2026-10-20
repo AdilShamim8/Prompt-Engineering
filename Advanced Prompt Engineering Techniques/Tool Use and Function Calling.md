@@ -2,6 +2,12 @@
 
 Instructing models to invoke external tools — APIs, calculators, databases, search — so computation happens where it is reliable and the model does what it is good at: deciding, structuring, and explaining. The prompting layer of tool use is where most integration failures are born and fixed.
 
+## Before You Start
+
+**Learning objectives** — after this guide you can: write tool descriptions that prevent mis-routing; instruct honest failure handling (never fabricate results); sequence multi-call tasks with inline planning; and apply the non-negotiable security line to tool-enabled prompts.
+
+**Prerequisites** — [Structured Outputs](./Structured%20Outputs%20and%20Schema%20Prompting.md) (tool calls are schema-constrained outputs). Curriculum position: [§3.6](../CURRICULUM.md#tier-c--extend-beyond-plain-textin-text-out); this guide is the stepping stone to [Agent-Oriented Prompting](./Agent-Oriented%20Prompting.md).
+
 ## The Division of Labor
 
 Models are excellent at: interpreting a request, deciding WHICH tool fits, structuring the call's arguments, and explaining results. Models are poor at: arithmetic, current data, precise retrieval, and anything requiring deterministic execution. Tool use assigns each part of a task to the performer that handles it well.
@@ -90,3 +96,12 @@ Tool prompts grant capabilities. The injection rules from the Injection Defense 
 - Tool-calling reliability varies across models and providers — test your specific combination, and re-test after model updates
 - Prompt-level rules reduce but do not eliminate fabrication-after-failure; monitor production logs for "results" that match no actual call
 - Complex orchestration (long-horizon planning, self-correction loops) outgrows single prompts — that is agent territory, with its own costs (see the Agent-Oriented Prompting guide)
+
+## Practice
+
+Design a three-tool set for a domain you know (for example: `lookup_order`, `search_orders`, `refund_order` — or your field's equivalents) and write full descriptions with when-to-use, when-NOT-to-use, precise parameter formats, and failure behavior. Then write the four error-handling rules adapted to your tools, and test with requests chosen to trigger each failure mode: an ambiguous request (wrong-tool risk), a request missing a required parameter (invention risk), and a nonexistent record (fabrication risk). Watch specifically for what happens after a failure — recovery or invention.
+
+## Further Reading
+
+- [ReAct: Synergizing Reasoning and Acting in Language Models](https://arxiv.org/abs/2210.03629) — the reasoning-and-acting pattern underlying modern tool use
+- Your provider's current function-calling documentation — schemas and semantics vary by provider (reviewed 2026-10-20; verify)
