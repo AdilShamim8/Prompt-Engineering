@@ -788,6 +788,96 @@ Constraints:
 
 **Pro Tip:** Keep a personal "context block" — 3–5 sentences describing your role, audience, and usual preferences — and paste it at the top of prompts where it applies. You get consistency across sessions without rewriting your situation every time.
 
+### 4.3 Output Formatting
+
+Output formatting is the explicit specification of how the response should be structured. When you leave the format unspecified, the model chooses one for you—and its default choice (usually flowing paragraphs) is rarely the one you need for scanning, comparing, or feeding the output into another tool. Template-driven prompting, where you provide the exact structure to fill in, is a standard technique used across provider platforms.[^39][^51]
+
+**When Format Specification Matters Most:**
+
+- The output will be read by another program (spreadsheets, scripts, dashboards)
+- You need to compare multiple items side by side
+- The response will be scanned quickly rather than read fully
+- You will run the same prompt repeatedly and need consistent results
+- Multiple people will use the prompt and need identical structure
+
+**Common Format Patterns:**
+
+```
+Lists:        "Return the result as a numbered list. One item per line. No extra commentary."
+
+Tables:       "Present the comparison as a Markdown table with columns: Option, Cost, Speed, Risk."
+
+JSON:         "Respond ONLY with valid JSON matching this structure:
+              {\"title\": string, \"tags\": string[], \"summary\": string}"
+
+Sections:     "Organize the answer under these headings: Problem, Options, Recommendation, Next Steps."
+
+Templates:    "Fill in this template exactly, replacing the bracketed placeholders:
+              Subject: [subject]
+              Severity: [low/medium/high]
+              Suggested fix: [one sentence]"
+```
+
+**Technique 1: Give a Skeleton to Fill**
+
+Instead of describing the format, show it. A skeleton removes nearly all formatting ambiguity:
+
+```
+Extract each bug report from the release notes into this structure:
+
+- **ID:** [bug identifier]
+- **Symptom:** [what the user experiences]
+- **Component:** [affected area]
+- **Severity:** [critical/major/minor]
+```
+
+**Technique 2: Combine Format with Quantity**
+
+```
+"Give me exactly 5 headline options. Number them 1-5. Each headline must be under 60
+characters. After the list, add one line naming your top pick and why."
+```
+
+**Technique 3: Separate the Answer from the Reasoning**
+
+When you need clean output but also want to see the logic, ask for the usable result first and the explanation second—or in a clearly separated block—so you can copy the first part without editing.
+
+```
+"First give the final product description (exactly 50 words, ready to publish).
+Then, under a 'Notes' heading, briefly explain your word choices."
+```
+
+**Try This - Output Formatting:**
+
+**Example 1: From Paragraph to Usable Data**
+
+```
+Without format spec: "Tell me about these three web hosting plans."
+→ Three paragraphs of prose you must re-read to compare.
+
+With format spec: "Compare these three web hosting plans in a Markdown table.
+Columns: Plan, Monthly price, Storage, Bandwidth, Free SSL (yes/no), Best for.
+After the table, add one sentence recommending a plan for a small blog."
+→ A scannable table plus a decision.
+```
+
+**Example 2: Machine-Ready Output**
+
+```
+"Classify each customer message and respond only with JSON—no text before or after:
+
+[{\"id\": 1, \"category\": \"billing|technical|other\", \"urgency\": 1-5}]
+
+Messages:
+1. \"My card was charged twice this month.\"
+2. \"The app crashes when I upload photos.\"
+3. \"Do you ship to Canada?\""
+```
+
+**Common Mistake:** Specifying a format but not what to do when the format does not fit. Add a fallback rule: "If an item does not fit any category, use 'other'" or "If information is missing, write 'N/A' rather than omitting the field." Without fallbacks, models sometimes invent values to satisfy the structure.
+
+**Pro Tip:** If you will paste the output into a spreadsheet, ask for comma-separated or Markdown-table output. If it feeds a script, ask for JSON and the phrase "respond only with"—leading and trailing prose is the most common cause of parsing failures. When using an API, prefer the provider's structured-output or JSON-mode features over prompt-only format requests, because they enforce validity at the system level.
+
 <span style="display:none">[^18][^19][^20][^21][^22][^23][^24][^25][^26][^27][^28][^29][^30][^31][^32][^33][^34][^35][^36][^37][^38][^39][^40][^41][^42][^43][^44][^45][^46][^47][^48][^49][^50][^51][^52]</span>
 
 
