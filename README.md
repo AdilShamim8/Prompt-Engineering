@@ -15,7 +15,7 @@ Whether you're a beginner, researcher, student, teacher, business professional, 
 
 ## Repository Structure
 
-This repository is organized into the following main sections to serve different user needs:
+This repository is organized into the following main sections to serve different user needs. A natural learning path runs through them: start with the [Beginners guide](./AI%20Prompt%20for%20Beginners/) for the foundations, apply them in the audience collection that matches your work, and extend into the [Advanced Techniques](./Advanced%20Prompt%20Engineering%20Techniques/) when you need production-grade patterns. Each directory contains a README index of its files.
 
 ### [AI Prompt for Beginners](./AI%20Prompt%20for%20Beginners)
 - Fundamental concepts and terminology
