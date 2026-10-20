@@ -1626,6 +1626,51 @@ When prompts are shared across a team or embedded in products, look for tooling 
 
 **Pro Tip:** Schedule a quarterly prompt review: re-test your adopted prompts, retire what you no longer use, and update entries whose outputs have drifted after model updates. Ten minutes of maintenance prevents the slow rot of a library that no one trusts.
 
+### 8.2 Testing and Evaluation
+
+A prompt you have not tested is a hypothesis. Evaluation turns prompt writing from taste into evidence: you learn which variants actually perform better on your tasks, and you notice regressions before your readers do.[^33][^36]
+
+**The Minimum Viable Test Set**
+
+For any prompt you rely on, save 5–10 representative inputs:
+
+- 2–3 typical cases (the everyday 80%)
+- 1–2 edge cases (unusually short, long, or oddly formatted input)
+- 1 previously-failed case (your regression canary)
+- 1 adversarial case (input containing text that tries to derail the task)
+
+**What to Measure**
+
+| Dimension | Question | How to check |
+| :-- | :-- | :-- |
+| Correctness | Is the content right? | Verify facts, run the code, recompute numbers |
+| Completeness | Does it cover what was asked? | Checklist of required elements per test case |
+| Format compliance | Does it follow the structure? | Mechanical check: headings, counts, JSON validity |
+| Consistency | Same input, same quality twice? | Run 3 times; note drift |
+| Safety/robustness | Does it misbehave on bad input? | Feed the adversarial case; inspect |
+
+Note that correctness requires a human or an external check—these are the checks that matter most and are easiest to skip.[^31]
+
+**A Simple Evaluation Rubric**
+
+Score each test case 1–5 on the dimensions above, and record the score next to the test input. A prompt that scores 4+ across your set is adoptable; anything lower gets one round of revision (Section 4.4) before re-testing. The exact numbers matter less than having the same yardstick every time.
+
+**Regression Testing After Changes**
+
+The discipline that separates hobbyists from professionals: every time you edit an adopted prompt, re-run the full test set, not just the case that prompted the change. Improving one input while silently breaking three others is the most common failure in prompt maintenance, and only a re-run reveals it.
+
+**When Model or Provider Changes Occur**
+
+Model updates can change outputs for identical prompts. If a trusted prompt suddenly misbehaves, first verify with your saved test set whether quality actually dropped, then diagnose: which cases regressed, and in which dimension. This evidence turns "it feels worse lately" into an actionable diff.
+
+**LLM-as-Judge: Useful but Imperfect**
+
+Using one model to grade another's outputs is common for scale, and it correlates reasonably with human judgment for coarse judgments (is this response complete? on-topic? correctly formatted?). But automated judges inherit biases (verbosity preference, self-preference) and miss subtle factual errors. For anything consequential, human review remains the ground truth; automated scoring is a triage layer, not a replacement.[^38]
+
+**Common Mistake:** Evaluating on the happy path only. Prompts that work on clean inputs fail on the messy ones real life delivers. The edge and adversarial cases in your test set exist precisely to catch this before deployment.
+
+**Pro Tip:** Store test inputs and expected-outcome notes together with each prompt entry in your library (Section 8.1). Prompt + tests + notes is the complete unit of reusable prompt engineering; a prompt alone is half an asset.
+
 <span style="display:none">[^18][^19][^20][^21][^22][^23][^24][^25][^26][^27][^28][^29][^30][^31][^32][^33][^34][^35][^36][^37][^38][^39][^40][^41][^42][^43][^44][^45][^46][^47][^48][^49][^50][^51][^52]</span>
 
 
