@@ -188,7 +188,7 @@ Contributions are welcome and greatly appreciated! Here's how you can contribute
 
 ### Contribution Guidelines
 
-- Add prompts in the appropriate section (Beginners/Business/Data Scientists/Researchers/Students/Teachers/HR/Marketing)
+- Add prompts in the appropriate section (Beginners/Business/Data Scientists/Researchers/Students/Teachers/HR/Marketing/Advanced Techniques)
 - Include clear explanations and examples
 - Test your prompts with at least one AI model before submitting
 - Document any limitations or special considerations
