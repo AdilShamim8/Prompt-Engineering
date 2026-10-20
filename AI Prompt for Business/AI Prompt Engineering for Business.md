@@ -2,6 +2,8 @@
 
 This handbook provides a **progressive, practical resource for entrepreneurs, managers, consultants, and professionals**—from beginner to expert—organized into chapters that address core business functions with ready-to-use prompts, expert explanations, and advanced variations.
 
+> **Companion guides in this directory:** [Financial Forecasting & Budgeting](./Financial%20Forecasting%20%26%20Budgeting%20Prompts.md) · [Scenario Planning & Risk Management](./Scenario%20Planning%20%26%20Risk%20Management%20Prompts.md) · [Operations & Process Optimization](./Operations%20%26%20Process%20Optimization%20Prompts.md) · [Leadership & Team Management](./Leadership%20%26%20Team%20Management%20Prompts.md) · [Customer Success & Retention](./Customer%20Success%20%26%20Retention%20Prompts.md) · [Business Presentations & Storytelling](./Business%20Presentations%20%26%20Storytelling%20Prompts.md) · [Responsible AI Use for Business](./Responsible%20AI%20Use%20for%20Business.md)
+
 ***
 
 ## Chapter 1: Introduction to Prompt Engineering for Business
