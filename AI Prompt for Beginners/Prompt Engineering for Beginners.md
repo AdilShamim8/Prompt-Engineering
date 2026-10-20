@@ -1143,6 +1143,68 @@ Rank the issues by severity and show a fix for the top two only."
 
 **Pro Tip:** When a model's code fails, reply with the new error and the code it gave you: "This produced [error]. Here is the code: [paste]." Continuing the thread with full context is far more effective than starting over, because the model already knows the constraints from your original request.
 
+### 5.4 Problem Solving and Reasoning
+
+For decisions and multi-step problems, the goal of prompting is not to get an answer quickly—it is to get reasoning you can check. Chain-of-thought techniques (Section 3.3) shine here, and this section shows how to apply them to real decisions rather than math puzzles.[^27][^28]
+
+**Pattern 1: Decision Analysis with Explicit Criteria**
+
+```
+"I'm deciding between two job offers and want structured help thinking it through.
+
+Offer A: [salary, role, commute, growth, culture notes]
+Offer B: [same fields]
+My priorities, in order: 1) growth, 2) stability, 3) salary, 4) location.
+
+1. First, restate my situation in 3 sentences to confirm you understand it.
+2. Score each offer 1-5 against each of my four priorities, with one-line reasons.
+3. Show your scoring logic step by step before giving totals.
+4. State what additional information would most change the analysis.
+Do not tell me which offer to pick."
+```
+
+Asking the model not to decide keeps you in the decision-making seat—an important habit for consequential choices (see Section 7.1).
+
+**Pattern 2: Devil's Advocate**
+
+```
+"I've decided to launch our product in March instead of September. Argue the
+strongest case AGAINST this decision. Structure it as: 3 strongest objections,
+the evidence that would support each, and what early warning signs would tell me
+I'm wrong. Do not soften the objections."
+```
+
+**Pattern 3: Step-by-Step Troubleshooting**
+
+```
+"My laptop battery drains from 100% to 20% in about 90 minutes. Work through this
+diagnostically:
+1. List the 5 most likely causes, most likely first, with the reasoning for the order.
+2. For each, give one quick check I can run to confirm or rule it out.
+3. After I report results, narrow the list before suggesting fixes."
+```
+
+This "diagnose before fixing" structure prevents the most annoying failure mode: a confident but irrelevant solution.
+
+**Pattern 4: Estimation with Sanity Checks**
+
+```
+"Estimate how many customer support emails our 10-person team receives per week,
+using these facts: [number of customers, product type, known daily average].
+1. State your assumptions explicitly, numbered.
+2. Calculate the estimate step by step.
+3. Give a range, not a single number.
+4. Say which assumption, if wrong, changes the answer most."
+```
+
+Structured estimation turns vague gut feelings into checkable assumptions. When the model's number looks wrong, the numbered assumptions show you exactly where to correct it.
+
+**Common Mistake:** Asking "What should I do?" about high-stakes personal, legal, medical, or financial decisions. Models can structure your thinking, surface considerations, and explain options—but the choice, the verification, and the responsibility remain yours. For regulated matters, confirm any guidance with a qualified professional.
+
+**Pro Tip:** Ask for the reasoning to be checkable, not just present: "number your assumptions," "cite the specific facts from my message that support each claim," and "separate what you know from what you're inferring" all make outputs dramatically easier to verify.
+
+***
+
 <span style="display:none">[^18][^19][^20][^21][^22][^23][^24][^25][^26][^27][^28][^29][^30][^31][^32][^33][^34][^35][^36][^37][^38][^39][^40][^41][^42][^43][^44][^45][^46][^47][^48][^49][^50][^51][^52]</span>
 
 
