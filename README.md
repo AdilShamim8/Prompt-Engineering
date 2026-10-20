@@ -13,9 +13,24 @@ Prompt engineering is the art and science of crafting precise inputs to get the 
 
 Whether you're a beginner, researcher, student, teacher, business professional, data scientist, ML engineer, or work in marketing and communications, effective prompt engineering can dramatically improve your AI interactions and outcomes.
 
+## Learning Path
+
+The full curriculum — with prerequisites, module sequences, and mastery criteria — is defined in [CURRICULUM.md](./CURRICULUM.md). The short version:
+
+| Stage | What you learn | Where |
+|---|---|---|
+| 1–2 | Foundations: prompt anatomy, core techniques, responsible use | [Beginners guide](./AI%20Prompt%20for%20Beginners/) |
+| 3 | Production techniques: structured outputs, chaining, RAG, tools, evaluation, security | [Advanced Techniques](./Advanced%20Prompt%20Engineering%20Techniques/) |
+| 4 | Domain application: your professional context | [Audience collections](#repository-structure) |
+| 5 | Guided practice with measurable artifacts | [Labs](./labs/) |
+
+New here? Start at Stage 1. Building AI features? Jump to Stage 3 in the recommended tier order. What exists and what's next is tracked in [ROADMAP.md](./ROADMAP.md).
+
 ## Repository Structure
 
 This repository is organized into the following main sections to serve different user needs. A natural learning path runs through them: start with the [Beginners guide](./AI%20Prompt%20for%20Beginners/) for the foundations, apply them in the audience collection that matches your work, and extend into the [Advanced Techniques](./Advanced%20Prompt%20Engineering%20Techniques/) when you need production-grade patterns. Each directory contains a README index of its files.
+
+Supporting material sits alongside the content sections: [CURRICULUM.md](./CURRICULUM.md) (the learning map), [ROADMAP.md](./ROADMAP.md) (status and plans), [CONTRIBUTING.md](./CONTRIBUTING.md) (how to contribute), [templates/](./templates/) (reusable prompt skeletons), [labs/](./labs/) (guided practice), [glossary/](./glossary/glossary.md) (terminology), [references/](./references/references.md) (curated, dated sources), and [scripts/validate.py](./scripts/validate.py) (automated consistency checks).
 
 ### [AI Prompt for Beginners](./AI%20Prompt%20for%20Beginners)
 - Fundamental concepts and terminology
@@ -177,29 +192,26 @@ CONSTRAINTS: Keep the tone authentic and avoid greenwashing. Focus on benefits r
 
 ## How to Contribute
 
-Contributions are welcome and greatly appreciated! Here's how you can contribute:
+Contributions are welcome and greatly appreciated! The full guide — quality bar, module template, conventions, and checks — is in [CONTRIBUTING.md](./CONTRIBUTING.md). The short version:
 
 1. **Fork the Repository**: Create your own copy of the project
 2. **Create a Feature Branch**: `git checkout -b feature/amazing-prompts`
-3. **Add Your Contributions**: Follow the existing format
-4. **Commit Your Changes**: `git commit -m 'Add some amazing prompts'`
-5. **Push to Your Branch**: `git push origin feature/amazing-prompts`
-6. **Open a Pull Request**: Submit your changes for review
-
-### Contribution Guidelines
-
-- Add prompts in the appropriate section (Beginners/Business/Data Scientists/Researchers/Students/Teachers/HR/Marketing/Advanced Techniques)
-- Include clear explanations and examples
-- Test your prompts with at least one AI model before submitting
-- Document any limitations or special considerations
+3. **Add Your Contributions**: Follow the module template in [CONTRIBUTING.md](./CONTRIBUTING.md) and test your prompts with a real model first
+4. **Run the Checks**: `python scripts/validate.py` must pass
+5. **Commit and Push**: One coherent change per commit
+6. **Open a Pull Request**: Describe what it teaches or fixes and how you verified it
 
 ## Additional Resources
 
+Curated and dated sources — provider documentation, foundational research papers, and security references — are collected in [references/references.md](./references/references.md). Key starting points:
+
 - [OpenAI's Prompt Engineering Guide](https://platform.openai.com/docs/guides/prompt-engineering)
-- [Anthropic's Prompt Design Best Practices](https://docs.anthropic.com/claude/docs/prompt-engineering)
+- [Anthropic's Prompt Engineering Documentation](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview)
 - [Prompt Engineering Patterns](https://www.promptingguide.ai/)
-- [Gemini Prompt Design](https://ai.google.dev/docs/prompt_design)
+- [Google's Gemini Prompt Design Strategies](https://ai.google.dev/gemini-api/docs/prompting-strategies)
 - [Awesome Prompt Engineering](https://github.com/promptslab/Awesome-Prompt-Engineering)
+
+Terminology used across the repository is defined in the [glossary](./glossary/glossary.md).
 
 ## Getting Started
 
