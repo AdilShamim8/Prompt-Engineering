@@ -1066,6 +1066,83 @@ Language models can make arithmetic errors, so always ask them to recompute and 
 
 **Pro Tip:** Work on a sample first. Paste 10 rows, get the extraction right, then apply the same prompt to the rest. Fixing a schema on 10 rows costs seconds; discovering a broken schema after 500 rows costs an hour.
 
+### 5.3 Code Generation and Debugging
+
+AI models are strong coding assistants when you give them what a good colleague would need: the goal, the environment, the code that failed, and the exact error. They are unreliable when asked to produce complete, correct programs from a single vague sentence. Treat generated code as a draft you must review, never as finished software.[^37]
+
+**Pattern 1: Request Code with Context and Constraints**
+
+```
+"Write a Python function that reads a CSV file and prints the 5 rows with the
+highest value in the 'revenue' column.
+
+Requirements:
+- Use only the pandas library
+- Handle a missing 'revenue' column with a clear error message
+- Include a docstring and 3 example usages as comments
+- Python 3.10"
+```
+
+Specifying the language version, libraries, and edge-case behavior upfront prevents the most common disappointment: code that works, but not in your environment.
+
+**Pattern 2: Debug with the Full Error**
+
+```
+"This Python script should rename all .txt files in a folder by adding today's
+date, but it raises the error below.
+
+The script:
+"""
+[paste script]
+"""
+
+The full error message:
+"""
+[paste traceback]
+"""
+
+1. Explain in plain language what went wrong.
+2. Show the corrected code, marking changed lines with a comment.
+3. Explain how the fix prevents the error."
+```
+
+Always paste the complete error message. Models routinely solve in seconds what takes humans an hour of staring—provided they can see the traceback.
+
+**Pattern 3: Explain Unfamiliar Code**
+
+```
+"Explain this SQL query line by line for someone who knows spreadsheets but not
+SQL. Then state in one sentence what the query overall does, and flag any part
+that could be slow on a large table.
+
+"""
+[paste query]
+"""
+```
+
+**Pattern 4: Review Before You Trust**
+
+```
+"Review this code that you did not write: [paste code].
+Check specifically for:
+1. Edge cases that would crash it
+2. Security issues (injection, unsafe file handling, exposed secrets)
+3. Off-by-one or logic errors
+Rank the issues by severity and show a fix for the top two only."
+```
+
+**Rules of Thumb for AI-Assisted Coding:**
+
+- **Never run generated code that touches files, networks, or payments without reading it.** Look especially at delete operations, shell commands, and loops with side effects.
+- **Ask for tests.** "Include 3 pytest cases, including one that should fail" forces the model to state expected behavior precisely.
+- **Work in small pieces.** One function per prompt beats a 300-line dump you cannot review.
+- **Say what you do not want.** "Do not use list comprehensions; this is for a beginner class" is a legitimate and useful constraint.
+- **Verify externally.** Official documentation and running the code in a sandbox are the ground truth; the model's confidence is not evidence of correctness.
+
+**Common Mistake:** Accepting code because it looks clean. Plausibility is not correctness—syntax can be perfect while the logic quietly does the wrong thing on your actual data. Test with inputs where you already know the right answer.
+
+**Pro Tip:** When a model's code fails, reply with the new error and the code it gave you: "This produced [error]. Here is the code: [paste]." Continuing the thread with full context is far more effective than starting over, because the model already knows the constraints from your original request.
+
 <span style="display:none">[^18][^19][^20][^21][^22][^23][^24][^25][^26][^27][^28][^29][^30][^31][^32][^33][^34][^35][^36][^37][^38][^39][^40][^41][^42][^43][^44][^45][^46][^47][^48][^49][^50][^51][^52]</span>
 
 
