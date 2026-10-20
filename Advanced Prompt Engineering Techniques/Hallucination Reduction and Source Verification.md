@@ -2,6 +2,12 @@
 
 Techniques that measurably reduce fabrication — and the verification discipline that catches what remains. The honest premise: hallucination cannot be prompted away entirely. It is a property of how these systems generate. The goal is reducing its frequency, containing its blast radius, and building the checks that catch it before it matters.
 
+## Before You Start
+
+**Learning objectives** — after this guide you can: explain why models fabricate (the four mechanisms); apply the reduction patterns (ground-or-refuse, uncertainty permission, abstention formats); tier verification effort by consequence; and track fabrication as a measured rate, not an anecdote.
+
+**Prerequisites** — [Beginners guide](../AI%20Prompt%20for%20Beginners/Prompt%20Engineering%20for%20Beginners.md) §6 (pitfalls). Curriculum position: [§3.9](../CURRICULUM.md#tier-d--trust-and-reliability); pairs with [RAG Prompting](./RAG%20Prompting.md) (the grounding architecture) and [Evaluation](./Prompt%20Evaluation%20and%20Testing.md) (the measurement discipline).
+
 ## Why Models Fabricate
 
 Understanding the mechanism guides the countermeasures:
@@ -116,3 +122,12 @@ For prompts in repeated use, make fabrication a tracked metric (see the Evaluati
 ## The Honest Ceiling
 
 Even with every technique applied, hallucination rates go down, not to zero — and the residual failures are the fluent, plausible ones that evade casual reading. That is why this guide's title has two parts: reduction techniques AND verification. Any workflow that deploys the first without the second is choosing to be surprised eventually. The verification layer is not an admission of failure; it is the professional operating procedure for a tool whose fluency and reliability are separate dials.
+
+## Practice
+
+Ask a model for information in a domain where you can check every claim — your company's fictional policy docs, a hobby you know cold, a historical period you have read deeply in. Collect 20 factual claims from the output and verify each one; record fabricated and unsupported claims separately (a claim can be true-but-unstated-by-any-source, which is the sneakiest category). Then re-run with an abstention-permitting prompt ("mark any claim you are not certain of as UNVERIFIED") and measure the delta. Keep the verified list as your first hallucination-rate dataset — the seed of [Lab 3](../labs/lab-03-evaluation-and-regression-testing.md)'s golden set.
+
+## Further Reading
+
+- [Survey of Hallucination in Natural Language Generation](https://arxiv.org/abs/2202.03629) — the taxonomy and causes
+- [OpenAI — reducing model hallucinations](https://platform.openai.com/docs/guides/prompt-engineering) — provider techniques, under the honesty sections (reviewed 2026-10-20; verify against current docs)
